@@ -585,11 +585,54 @@
     }
 
     .shisa-face.illustration img {
+      position: relative;
+      z-index: 1;
       display: block;
       width: 100%;
       height: 100%;
       object-fit: contain;
       filter: drop-shadow(0 8px 10px rgba(76, 43, 33, 0.18));
+    }
+
+    .shisa-roar-mouth {
+      position: absolute;
+      left: 50%;
+      top: 44.5%;
+      z-index: 3;
+      width: 22px;
+      height: 15px;
+      border: 2px solid rgba(104, 35, 22, 0.88);
+      border-radius: 44% 44% 55% 55%;
+      background:
+        radial-gradient(ellipse at 50% 76%, #e8694f 0 33%, transparent 36%),
+        radial-gradient(ellipse at 50% 44%, #371714 0 64%, #160908 65% 100%);
+      box-shadow:
+        inset 0 3px 0 rgba(255, 229, 191, 0.2),
+        0 1px 2px rgba(76, 43, 33, 0.14);
+      opacity: 0;
+      pointer-events: none;
+      transform: translate(-50%, -50%) scaleY(0.08) scaleX(0.86);
+      transform-origin: 50% 38%;
+    }
+
+    .shisa-roar-mouth::before,
+    .shisa-roar-mouth::after {
+      content: "";
+      position: absolute;
+      top: 1px;
+      width: 5px;
+      height: 7px;
+      border-radius: 0 0 60% 60%;
+      background: #fff5d8;
+      clip-path: polygon(0 0, 100% 0, 50% 100%);
+    }
+
+    .shisa-roar-mouth::before {
+      left: 4px;
+    }
+
+    .shisa-roar-mouth::after {
+      right: 4px;
     }
 
     .shisa-face.illustration::before {
@@ -608,6 +651,10 @@
 
     .shisa-toast.show .shisa-face.illustration img {
       animation: shisa-huff 680ms ease-in-out infinite;
+    }
+
+    .shisa-toast.show .shisa-roar-mouth {
+      animation: shisa-roar-mouth 1150ms ease-in-out infinite;
     }
 
     .shisa-toast.show .shisa-face.illustration::before {
@@ -714,6 +761,37 @@
       }
     }
 
+    @keyframes shisa-roar-mouth {
+      0%, 11%, 100% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scaleY(0.08) scaleX(0.86);
+      }
+      18% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scaleY(0.55) scaleX(0.92);
+      }
+      32% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scaleY(1.35) scaleX(1.1);
+      }
+      48% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scaleY(1.06) scaleX(1.02);
+      }
+      64% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scaleY(1.44) scaleX(1.12);
+      }
+      78% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scaleY(0.42) scaleX(0.9);
+      }
+      88% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scaleY(0.1) scaleX(0.86);
+      }
+    }
+
     @keyframes steam-left {
       0% {
         opacity: 0;
@@ -757,6 +835,7 @@
       .shisa-face,
       .shisa-toast.show .shisa-face,
       .shisa-face.illustration img,
+      .shisa-roar-mouth,
       .shisa-face.illustration::before,
       .shisa-face.illustration::after {
         animation: none;
@@ -1162,6 +1241,7 @@
   <div class="shisa-toast" id="shisaToast" role="status" aria-live="polite">
     <div class="shisa-face illustration" aria-hidden="true">
       <img src="assets/shisa-mascot.png" alt="">
+      <div class="shisa-roar-mouth"></div>
     </div>
     <div>
       <strong>風獅爺氣嘟嘟！</strong>
