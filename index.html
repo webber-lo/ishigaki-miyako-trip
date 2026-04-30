@@ -286,7 +286,10 @@
       right: 22px;
       bottom: 22px;
       z-index: 20;
-      display: none;
+      display: grid;
+      grid-template-columns: auto minmax(0, 1fr);
+      gap: 14px;
+      align-items: center;
       max-width: min(420px, calc(100% - 44px));
       padding: 16px 18px;
       border: 2px solid #c7502d;
@@ -294,10 +297,17 @@
       background: #fff7ed;
       color: #4c2b21;
       box-shadow: 0 18px 40px rgba(74, 38, 28, 0.18);
+      opacity: 0;
+      pointer-events: none;
+      transform: translateY(14px) scale(0.98);
+      transition: opacity 160ms ease, transform 160ms ease;
     }
 
     .shisa-toast.show {
-      display: block;
+      opacity: 1;
+      pointer-events: auto;
+      transform: translateY(0) scale(1);
+      animation: toast-pop 360ms ease;
     }
 
     .shisa-toast strong {
@@ -308,6 +318,189 @@
 
     .shisa-toast p {
       margin: 6px 0 0;
+    }
+
+    .shisa-face {
+      position: relative;
+      width: 88px;
+      height: 88px;
+      border: 4px solid #8c3a24;
+      border-radius: 42% 46% 48% 44%;
+      background:
+        radial-gradient(circle at 28% 36%, #fff2dc 0 7px, transparent 8px),
+        radial-gradient(circle at 72% 36%, #fff2dc 0 7px, transparent 8px),
+        linear-gradient(145deg, #f3a44a, #d75f31 72%);
+      box-shadow:
+        inset 0 -8px 0 rgba(109, 40, 22, 0.18),
+        0 6px 0 rgba(76, 43, 33, 0.12);
+      animation: shisa-idle 1400ms ease-in-out infinite;
+      flex: 0 0 auto;
+    }
+
+    .shisa-toast.show .shisa-face {
+      animation: shisa-grumble 520ms ease, shisa-idle 1400ms ease-in-out 520ms infinite;
+    }
+
+    .shisa-face::before,
+    .shisa-face::after {
+      content: "";
+      position: absolute;
+      top: -12px;
+      width: 28px;
+      height: 28px;
+      border: 4px solid #8c3a24;
+      border-radius: 8px 14px 8px 14px;
+      background: #f7c15b;
+      transform: rotate(18deg);
+      z-index: -1;
+    }
+
+    .shisa-face::before {
+      left: 2px;
+      transform: rotate(-22deg);
+    }
+
+    .shisa-face::after {
+      right: 2px;
+    }
+
+    .shisa-mane {
+      position: absolute;
+      inset: -13px;
+      border-radius: 50%;
+      background:
+        radial-gradient(circle at 50% 0%, #c7472d 0 9px, transparent 10px),
+        radial-gradient(circle at 86% 20%, #c7472d 0 8px, transparent 9px),
+        radial-gradient(circle at 100% 54%, #c7472d 0 9px, transparent 10px),
+        radial-gradient(circle at 76% 96%, #c7472d 0 8px, transparent 9px),
+        radial-gradient(circle at 22% 96%, #c7472d 0 8px, transparent 9px),
+        radial-gradient(circle at 0% 54%, #c7472d 0 9px, transparent 10px),
+        radial-gradient(circle at 14% 20%, #c7472d 0 8px, transparent 9px);
+      z-index: -2;
+    }
+
+    .shisa-eye {
+      position: absolute;
+      top: 31px;
+      width: 11px;
+      height: 11px;
+      border-radius: 50%;
+      background: #3d1f19;
+      box-shadow: 0 -5px 0 #8c3a24;
+    }
+
+    .shisa-eye.left {
+      left: 24px;
+    }
+
+    .shisa-eye.right {
+      right: 24px;
+    }
+
+    .shisa-cheek {
+      position: absolute;
+      top: 45px;
+      width: 19px;
+      height: 16px;
+      border-radius: 50%;
+      background: rgba(255, 214, 130, 0.86);
+    }
+
+    .shisa-cheek.left {
+      left: 12px;
+    }
+
+    .shisa-cheek.right {
+      right: 12px;
+    }
+
+    .shisa-nose {
+      position: absolute;
+      top: 42px;
+      left: 50%;
+      width: 16px;
+      height: 12px;
+      border-radius: 50% 50% 46% 46%;
+      background: #3d1f19;
+      transform: translateX(-50%);
+    }
+
+    .shisa-mouth {
+      position: absolute;
+      top: 57px;
+      left: 50%;
+      width: 30px;
+      height: 14px;
+      border: 4px solid #3d1f19;
+      border-top: 0;
+      border-radius: 0 0 24px 24px;
+      transform: translateX(-50%);
+    }
+
+    .shisa-tooth {
+      position: absolute;
+      top: 56px;
+      width: 8px;
+      height: 10px;
+      background: #fff8e8;
+      clip-path: polygon(0 0, 100% 0, 50% 100%);
+    }
+
+    .shisa-tooth.left {
+      left: 35px;
+    }
+
+    .shisa-tooth.right {
+      right: 35px;
+    }
+
+    @keyframes toast-pop {
+      0% {
+        transform: translateY(14px) scale(0.92);
+      }
+      62% {
+        transform: translateY(-3px) scale(1.02);
+      }
+      100% {
+        transform: translateY(0) scale(1);
+      }
+    }
+
+    @keyframes shisa-grumble {
+      0%, 100% {
+        transform: rotate(0deg) scale(1);
+      }
+      18% {
+        transform: rotate(-8deg) scale(1.06);
+      }
+      36% {
+        transform: rotate(7deg) scale(1.04);
+      }
+      54% {
+        transform: rotate(-5deg) scale(1.06);
+      }
+      72% {
+        transform: rotate(4deg) scale(1.02);
+      }
+    }
+
+    @keyframes shisa-idle {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-2px);
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .shisa-toast,
+      .shisa-toast.show,
+      .shisa-face,
+      .shisa-toast.show .shisa-face {
+        animation: none;
+        transition: none;
+      }
     }
 
     .discussion-grid {
@@ -676,8 +869,21 @@
     </footer>
   </main>
   <div class="shisa-toast" id="shisaToast" role="status" aria-live="polite">
-    <strong>風獅爺氣嘟嘟！</strong>
-    <p id="shisaMessage">這樣排會瞬間移動過頭，先彈回原位。</p>
+    <div class="shisa-face" aria-hidden="true">
+      <div class="shisa-mane"></div>
+      <div class="shisa-eye left"></div>
+      <div class="shisa-eye right"></div>
+      <div class="shisa-cheek left"></div>
+      <div class="shisa-cheek right"></div>
+      <div class="shisa-nose"></div>
+      <div class="shisa-mouth"></div>
+      <div class="shisa-tooth left"></div>
+      <div class="shisa-tooth right"></div>
+    </div>
+    <div>
+      <strong>風獅爺氣嘟嘟！</strong>
+      <p id="shisaMessage">這樣排會瞬間移動過頭，先彈回原位。</p>
+    </div>
   </div>
   <script>
     const storageKey = "ishigakiMiyakoBlockPlan";
