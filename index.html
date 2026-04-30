@@ -322,17 +322,18 @@
 
     .shisa-face {
       position: relative;
-      width: 88px;
-      height: 88px;
-      border: 4px solid #8c3a24;
-      border-radius: 42% 46% 48% 44%;
+      width: 104px;
+      height: 98px;
+      border: 5px solid #7d321f;
+      border-radius: 42% 44% 50% 48%;
       background:
-        radial-gradient(circle at 28% 36%, #fff2dc 0 7px, transparent 8px),
-        radial-gradient(circle at 72% 36%, #fff2dc 0 7px, transparent 8px),
-        linear-gradient(145deg, #f3a44a, #d75f31 72%);
+        radial-gradient(circle at 30% 39%, #fff4da 0 11px, transparent 12px),
+        radial-gradient(circle at 70% 39%, #fff4da 0 11px, transparent 12px),
+        radial-gradient(circle at 50% 62%, #ffd777 0 28px, transparent 29px),
+        linear-gradient(145deg, #f5a346, #d85b32 72%);
       box-shadow:
-        inset 0 -8px 0 rgba(109, 40, 22, 0.18),
-        0 6px 0 rgba(76, 43, 33, 0.12);
+        inset 0 -10px 0 rgba(109, 40, 22, 0.18),
+        0 7px 0 rgba(76, 43, 33, 0.12);
       animation: shisa-idle 1400ms ease-in-out infinite;
       flex: 0 0 auto;
     }
@@ -345,18 +346,18 @@
     .shisa-face::after {
       content: "";
       position: absolute;
-      top: -12px;
-      width: 28px;
-      height: 28px;
-      border: 4px solid #8c3a24;
-      border-radius: 8px 14px 8px 14px;
+      top: -16px;
+      width: 30px;
+      height: 30px;
+      border: 5px solid #7d321f;
+      border-radius: 9px 17px 9px 17px;
       background: #f7c15b;
       transform: rotate(18deg);
       z-index: -1;
     }
 
     .shisa-face::before {
-      left: 2px;
+      left: 3px;
       transform: rotate(-22deg);
     }
 
@@ -366,92 +367,169 @@
 
     .shisa-mane {
       position: absolute;
-      inset: -13px;
+      inset: -18px;
       border-radius: 50%;
       background:
-        radial-gradient(circle at 50% 0%, #c7472d 0 9px, transparent 10px),
-        radial-gradient(circle at 86% 20%, #c7472d 0 8px, transparent 9px),
-        radial-gradient(circle at 100% 54%, #c7472d 0 9px, transparent 10px),
-        radial-gradient(circle at 76% 96%, #c7472d 0 8px, transparent 9px),
-        radial-gradient(circle at 22% 96%, #c7472d 0 8px, transparent 9px),
-        radial-gradient(circle at 0% 54%, #c7472d 0 9px, transparent 10px),
-        radial-gradient(circle at 14% 20%, #c7472d 0 8px, transparent 9px);
+        radial-gradient(circle at 50% 0%, #bd3f29 0 11px, transparent 12px),
+        radial-gradient(circle at 70% 6%, #bd3f29 0 10px, transparent 11px),
+        radial-gradient(circle at 88% 22%, #bd3f29 0 12px, transparent 13px),
+        radial-gradient(circle at 100% 48%, #bd3f29 0 12px, transparent 13px),
+        radial-gradient(circle at 90% 76%, #bd3f29 0 10px, transparent 11px),
+        radial-gradient(circle at 68% 98%, #bd3f29 0 11px, transparent 12px),
+        radial-gradient(circle at 32% 98%, #bd3f29 0 11px, transparent 12px),
+        radial-gradient(circle at 10% 76%, #bd3f29 0 10px, transparent 11px),
+        radial-gradient(circle at 0% 48%, #bd3f29 0 12px, transparent 13px),
+        radial-gradient(circle at 12% 22%, #bd3f29 0 12px, transparent 13px),
+        radial-gradient(circle at 30% 6%, #bd3f29 0 10px, transparent 11px);
       z-index: -2;
+    }
+
+    .shisa-curl {
+      position: absolute;
+      width: 18px;
+      height: 18px;
+      border: 4px solid #7d321f;
+      border-left-color: transparent;
+      border-radius: 50%;
+      background: transparent;
+    }
+
+    .shisa-curl.one {
+      top: -9px;
+      left: 40px;
+      transform: rotate(-20deg);
+    }
+
+    .shisa-curl.two {
+      top: 13px;
+      right: -7px;
+      transform: rotate(42deg);
+    }
+
+    .shisa-curl.three {
+      bottom: 4px;
+      left: -4px;
+      transform: rotate(154deg);
+    }
+
+    .shisa-brow {
+      position: absolute;
+      top: 29px;
+      width: 25px;
+      height: 8px;
+      border-radius: 999px;
+      background: #7d321f;
+    }
+
+    .shisa-brow.left {
+      left: 20px;
+      transform: rotate(18deg);
+    }
+
+    .shisa-brow.right {
+      right: 20px;
+      transform: rotate(-18deg);
     }
 
     .shisa-eye {
       position: absolute;
-      top: 31px;
-      width: 11px;
-      height: 11px;
+      top: 39px;
+      width: 12px;
+      height: 12px;
       border-radius: 50%;
       background: #3d1f19;
-      box-shadow: 0 -5px 0 #8c3a24;
+      box-shadow: inset 3px -2px 0 #fff2dc;
     }
 
     .shisa-eye.left {
-      left: 24px;
+      left: 28px;
     }
 
     .shisa-eye.right {
-      right: 24px;
+      right: 28px;
     }
 
     .shisa-cheek {
       position: absolute;
-      top: 45px;
-      width: 19px;
-      height: 16px;
+      top: 54px;
+      width: 20px;
+      height: 17px;
       border-radius: 50%;
-      background: rgba(255, 214, 130, 0.86);
+      background: rgba(255, 196, 112, 0.92);
     }
 
     .shisa-cheek.left {
-      left: 12px;
+      left: 10px;
     }
 
     .shisa-cheek.right {
-      right: 12px;
+      right: 10px;
     }
 
     .shisa-nose {
       position: absolute;
-      top: 42px;
+      top: 49px;
       left: 50%;
-      width: 16px;
-      height: 12px;
-      border-radius: 50% 50% 46% 46%;
+      width: 22px;
+      height: 16px;
+      border-radius: 48% 48% 54% 54%;
       background: #3d1f19;
+      transform: translateX(-50%);
+    }
+
+    .shisa-snout {
+      position: absolute;
+      top: 60px;
+      left: 50%;
+      width: 48px;
+      height: 28px;
+      border: 4px solid #7d321f;
+      border-top: 0;
+      border-radius: 0 0 24px 24px;
+      background: #fff0cf;
       transform: translateX(-50%);
     }
 
     .shisa-mouth {
       position: absolute;
-      top: 57px;
+      top: 63px;
       left: 50%;
-      width: 30px;
-      height: 14px;
+      width: 42px;
+      height: 22px;
       border: 4px solid #3d1f19;
-      border-top: 0;
-      border-radius: 0 0 24px 24px;
+      border-radius: 0 0 28px 28px;
+      background: #7d2a22;
       transform: translateX(-50%);
     }
 
     .shisa-tooth {
       position: absolute;
-      top: 56px;
-      width: 8px;
-      height: 10px;
+      top: 63px;
+      width: 10px;
+      height: 13px;
       background: #fff8e8;
       clip-path: polygon(0 0, 100% 0, 50% 100%);
     }
 
     .shisa-tooth.left {
-      left: 35px;
+      left: 39px;
     }
 
     .shisa-tooth.right {
-      right: 35px;
+      right: 39px;
+    }
+
+    .shisa-chin {
+      position: absolute;
+      left: 50%;
+      bottom: -6px;
+      width: 34px;
+      height: 14px;
+      border-radius: 50%;
+      background: #ffd777;
+      border: 4px solid #7d321f;
+      border-top: 0;
+      transform: translateX(-50%);
     }
 
     @keyframes toast-pop {
@@ -871,14 +949,21 @@
   <div class="shisa-toast" id="shisaToast" role="status" aria-live="polite">
     <div class="shisa-face" aria-hidden="true">
       <div class="shisa-mane"></div>
+      <div class="shisa-curl one"></div>
+      <div class="shisa-curl two"></div>
+      <div class="shisa-curl three"></div>
+      <div class="shisa-brow left"></div>
+      <div class="shisa-brow right"></div>
       <div class="shisa-eye left"></div>
       <div class="shisa-eye right"></div>
       <div class="shisa-cheek left"></div>
       <div class="shisa-cheek right"></div>
       <div class="shisa-nose"></div>
+      <div class="shisa-snout"></div>
       <div class="shisa-mouth"></div>
       <div class="shisa-tooth left"></div>
       <div class="shisa-tooth right"></div>
+      <div class="shisa-chin"></div>
     </div>
     <div>
       <strong>風獅爺氣嘟嘟！</strong>
