@@ -1,0 +1,438 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>石垣島・宮古島旅伴討論頁</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #24302f;
+      --muted: #66736f;
+      --line: #d9e0dc;
+      --soft: #f4f7f3;
+      --sea: #116f77;
+      --reef: #0f8f88;
+      --sun: #d9822b;
+      --paper: #ffffff;
+      --mark: #fff3d7;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: #eef4f2;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+      line-height: 1.65;
+    }
+
+    .page {
+      width: min(1120px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 32px 0 56px;
+    }
+
+    header {
+      padding: 28px;
+      color: #fff;
+      background: linear-gradient(135deg, #0f5f67, #128c83 58%, #d58931);
+      border-radius: 8px;
+      box-shadow: 0 18px 40px rgba(19, 63, 66, 0.16);
+    }
+
+    h1,
+    h2,
+    h3 {
+      margin: 0;
+      line-height: 1.25;
+      letter-spacing: 0;
+    }
+
+    h1 {
+      font-size: clamp(28px, 5vw, 46px);
+      font-weight: 800;
+    }
+
+    .subtitle {
+      max-width: 760px;
+      margin: 12px 0 0;
+      color: rgba(255, 255, 255, 0.9);
+      font-size: 17px;
+    }
+
+    .meta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      min-height: 34px;
+      padding: 6px 12px;
+      border: 1px solid rgba(255, 255, 255, 0.42);
+      border-radius: 999px;
+      color: #fff;
+      background: rgba(255, 255, 255, 0.14);
+      font-size: 14px;
+      white-space: nowrap;
+    }
+
+    section {
+      margin-top: 28px;
+      padding: 24px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--paper);
+      box-shadow: 0 10px 24px rgba(42, 73, 72, 0.08);
+    }
+
+    .section-head {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+
+    h2 {
+      font-size: 24px;
+    }
+
+    .note {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .table-wrap {
+      overflow-x: auto;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+    }
+
+    table {
+      width: 100%;
+      min-width: 860px;
+      border-collapse: collapse;
+      background: #fff;
+    }
+
+    th,
+    td {
+      padding: 14px 16px;
+      border-bottom: 1px solid var(--line);
+      vertical-align: top;
+      text-align: left;
+    }
+
+    th {
+      color: #123d40;
+      background: #e7f1ef;
+      font-size: 14px;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    tr:last-child td {
+      border-bottom: 0;
+    }
+
+    .day {
+      width: 150px;
+      color: var(--sea);
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    .empty {
+      color: #9aa4a1;
+    }
+
+    .discussion-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .item {
+      min-height: 160px;
+      padding: 16px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--soft);
+    }
+
+    .item h3 {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 17px;
+    }
+
+    .tag {
+      flex: 0 0 auto;
+      padding: 3px 8px;
+      border-radius: 999px;
+      color: #fff;
+      background: var(--sea);
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .item p {
+      margin: 10px 0 0;
+    }
+
+    .leaning {
+      padding: 10px 12px;
+      border-left: 4px solid var(--sun);
+      background: var(--mark);
+      color: #51402a;
+    }
+
+    .food-list {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .food-card {
+      padding: 16px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fbfcfa;
+    }
+
+    .food-card strong {
+      color: var(--reef);
+    }
+
+    footer {
+      margin-top: 22px;
+      color: var(--muted);
+      font-size: 13px;
+      text-align: center;
+    }
+
+    @media (max-width: 760px) {
+      .page {
+        width: min(100% - 20px, 1120px);
+        padding-top: 10px;
+      }
+
+      header,
+      section {
+        padding: 18px;
+      }
+
+      .section-head {
+        display: block;
+      }
+
+      .note {
+        margin-top: 6px;
+      }
+
+      .discussion-grid,
+      .food-list {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media print {
+      body {
+        background: #fff;
+      }
+
+      .page {
+        width: 100%;
+        padding: 0;
+      }
+
+      header,
+      section {
+        box-shadow: none;
+        break-inside: avoid;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header>
+      <h1>石垣島・宮古島旅伴討論頁</h1>
+      <p class="subtitle">目前版本是 6 月底到 7 月初的 7 日行程草案。石垣負責魟魚、星空、跳島與文化；宮古負責陸地海景與完整潛水日。</p>
+      <div class="meta-row" aria-label="行程重點">
+        <span class="pill">石垣島進出</span>
+        <span class="pill">宮古島住兩晚</span>
+        <span class="pill">Manta City</span>
+        <span class="pill">八重干瀨 3 dives</span>
+        <span class="pill">竹富 + 小濱輕跳島</span>
+      </div>
+    </header>
+
+    <section aria-labelledby="overview-title">
+      <div class="section-head">
+        <h2 id="overview-title">1 到 7 日總體活動列表</h2>
+        <div class="note">空白欄位代表還沒定，可以一起討論。</div>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>天數</th>
+              <th>上午活動</th>
+              <th>下午活動</th>
+              <th>中餐吃什麼</th>
+              <th>晚上吃什麼</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="day">Day 1<br>抵達石垣</td>
+              <td>抵達石垣、放行李；公設市場 / Euglena Mall 輕逛。</td>
+              <td>咖啡休息；可選室內手作活動；16:00 check-in；有精神再去川平灣 / 夕陽。</td>
+              <td>市區簡單午餐，或公設市場漢堡 + 冰。</td>
+              <td>石垣牛燒肉。</td>
+            </tr>
+            <tr>
+              <td class="day">Day 2<br>石垣海洋重頭戲</td>
+              <td>Manta City / 川平外海看魟魚。</td>
+              <td>回市區休息；公設市場、Euglena Mall；可吃漢堡和冰。</td>
+              <td>公設市場漢堡 + 冰，或市區輕食。</td>
+              <td>海人居酒屋；晚點可接觀星 tour。</td>
+            </tr>
+            <tr>
+              <td class="day">Day 3<br>飛宮古・陸地日</td>
+              <td>一早石垣飛宮古；取車。</td>
+              <td>伊良部大橋、17END、渡口之濱、展望台。</td>
+              <td class="empty">待討論</td>
+              <td>宮古在地料理。</td>
+            </tr>
+            <tr>
+              <td class="day">Day 4<br>宮古海洋日</td>
+              <td>八重干瀨潛水。</td>
+              <td>3 支氣瓶潛水；視海況加藍洞 / 伊良部 / 下地島潛點。</td>
+              <td>船上 / 潛店安排。</td>
+              <td>潛水後輕鬆吃，不跑遠。</td>
+            </tr>
+            <tr>
+              <td class="day">Day 5<br>回石垣・陸地文化日</td>
+              <td>宮古飛回石垣。</td>
+              <td>石垣島鍾乳洞；みんさー織 / 辣油手作 / Shisa 彩繪擇一。</td>
+              <td class="empty">待討論</td>
+              <td class="empty">待討論</td>
+            </tr>
+            <tr>
+              <td class="day">Day 6<br>八重山輕跳島</td>
+              <td>竹富島：腳踏車 / 水牛車 / 村落散步。</td>
+              <td>小濱島：電動腳踏車、甘蔗田、展望點。</td>
+              <td>竹富島食堂吃八重山そば。</td>
+              <td class="empty">待討論</td>
+            </tr>
+            <tr>
+              <td class="day">Day 7<br>回程</td>
+              <td>依航班安排；市區補買伴手禮。</td>
+              <td>前往機場。</td>
+              <td class="empty">待討論</td>
+              <td class="empty">待討論</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section aria-labelledby="food-title">
+      <div class="section-head">
+        <h2 id="food-title">食物主題</h2>
+        <div class="note">先抓方向，餐廳名之後再定。</div>
+      </div>
+      <div class="food-list">
+        <div class="food-card">
+          <strong>石垣牛燒肉</strong>
+          <p>放在第一晚。熱門店建議預約，不現場賭運氣。</p>
+        </div>
+        <div class="food-card">
+          <strong>海人居酒屋</strong>
+          <p>放在 Manta City 當晚，晚餐別排太晚，後面可能接觀星。</p>
+        </div>
+        <div class="food-card">
+          <strong>在地料理</strong>
+          <p>宮古島安排宮古そば、島豆腐、海葡萄、泡盛等地方料理。</p>
+        </div>
+        <div class="food-card">
+          <strong>公設市場</strong>
+          <p>一定排漢堡跟冰，適合 Day 1 或 Day 2 下午。</p>
+        </div>
+        <div class="food-card">
+          <strong>竹富島食堂</strong>
+          <p>跳島日中午吃八重山そば，當天上島後先確認營業。</p>
+        </div>
+        <div class="food-card">
+          <strong>潛水後晚餐</strong>
+          <p>Day 4 不跑遠，吃舒服、洗澡、休息最重要。</p>
+        </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="discussion-title">
+      <div class="section-head">
+        <h2 id="discussion-title">待討論事項</h2>
+        <div class="note">旅伴可以先看「目前傾向」，再一起改。</div>
+      </div>
+      <div class="discussion-grid">
+        <article class="item">
+          <h3><span class="tag">交通</span> 騎摩托車還是租車？</h3>
+          <p>需要決定石垣、宮古兩邊的主要移動方式。</p>
+          <p class="leaning">目前傾向：租車。6 月底 / 7 月初很熱，也可能遇到午後雨；租車比較能放裝備、躲太陽，宮古跑大橋和海灘也更舒服。</p>
+        </article>
+        <article class="item">
+          <h3><span class="tag">水上活動</span> 潛水和水上活動會太多嗎？</h3>
+          <p>目前有 Day 2 Manta City，以及 Day 4 宮古八重干瀨 3 支氣瓶。</p>
+          <p class="leaning">目前傾向：可以，但 Day 3 是陸地緩衝日，Day 4 潛完當晚留宮古休息，不急著搬家。</p>
+        </article>
+        <article class="item">
+          <h3><span class="tag">探險</span> 要安排西表島嗎？</h3>
+          <p>西表島適合紅樹林、瀑布、獨木舟，但它是一個重型一日行程。</p>
+          <p class="leaning">目前傾向：先不加。若加入西表，可能要拿掉竹富 + 小濱輕跳島，或壓縮石垣陸地文化日。</p>
+        </article>
+        <article class="item">
+          <h3><span class="tag">Day 1</span> 抵達後到 check-in 前怎麼過？</h3>
+          <p>10:00 可放行李，但 16:00 才能進房。</p>
+          <p class="leaning">目前傾向：咖啡、公設市場、室內手作。沒力氣就只休息，不硬排。</p>
+        </article>
+        <article class="item">
+          <h3><span class="tag">夜間</span> 石垣觀星 tour 要不要排？</h3>
+          <p>星空很吃月相和天氣，滿月附近銀河效果會降低。</p>
+          <p class="leaning">目前傾向：保留 Day 2 晚上彈性，接近日期再看天氣和月相。</p>
+        </article>
+        <article class="item">
+          <h3><span class="tag">潛水</span> 八重干瀨能不能加藍洞？</h3>
+          <p>希望宮古海洋日玩滿，最好 3 支以上。</p>
+          <p class="leaning">目前傾向：跟同一間潛店談 3 boat dives。八重干瀨必去，若海況允許再加藍洞 / 伊良部 / 下地島潛點。</p>
+        </article>
+        <article class="item">
+          <h3><span class="tag">跳島</span> 竹富 + 小濱怎麼玩？</h3>
+          <p>這天不下水，以輕鬆陸地跳島為主。</p>
+          <p class="leaning">目前傾向：上午竹富騎腳踏車或水牛車，下午小濱電動腳踏車。船班以回石垣港轉乘為原則。</p>
+        </article>
+        <article class="item">
+          <h3><span class="tag">餐廳</span> 哪些餐廳要先訂？</h3>
+          <p>石垣牛燒肉、海人居酒屋、宮古在地料理都還能細選。</p>
+          <p class="leaning">目前傾向：石垣牛和熱門海鮮居酒屋優先預約；其他餐廳等航班、住宿位置確定後再鎖。</p>
+        </article>
+      </div>
+    </section>
+
+    <footer>
+      版本：旅伴討論草案。待補：實際航班時間、住宿位置、租車狀態、潛店預約結果、餐廳名單。
+    </footer>
+  </main>
+</body>
+</html>
