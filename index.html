@@ -154,6 +154,116 @@
       color: #9aa4a1;
     }
 
+    .planner-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+
+    .action-button,
+    .move-button {
+      min-height: 38px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      color: #123d40;
+      background: #fff;
+      font: inherit;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .action-button {
+      padding: 7px 12px;
+    }
+
+    .move-button {
+      width: 38px;
+      padding: 0;
+    }
+
+    .action-button:hover,
+    .move-button:hover {
+      border-color: var(--reef);
+      color: var(--reef);
+    }
+
+    .draggable-list {
+      display: grid;
+      gap: 12px;
+    }
+
+    .plan-card {
+      display: grid;
+      grid-template-columns: auto minmax(0, 1fr) auto;
+      gap: 14px;
+      align-items: start;
+      padding: 16px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fbfcfa;
+      box-shadow: 0 8px 18px rgba(42, 73, 72, 0.06);
+    }
+
+    .plan-card[draggable="true"] {
+      cursor: grab;
+    }
+
+    .plan-card.dragging {
+      opacity: 0.48;
+      cursor: grabbing;
+    }
+
+    .drag-handle {
+      display: grid;
+      place-items: center;
+      width: 34px;
+      min-height: 88px;
+      border-radius: 8px;
+      color: var(--sea);
+      background: #e7f1ef;
+      font-weight: 900;
+      line-height: 1;
+      user-select: none;
+    }
+
+    .plan-card h3 {
+      font-size: 18px;
+    }
+
+    .plan-card p {
+      margin: 8px 0 0;
+    }
+
+    .plan-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 10px;
+    }
+
+    .mini-tag {
+      padding: 3px 8px;
+      border-radius: 999px;
+      color: #39514d;
+      background: #edf3ef;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .move-controls {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .save-state {
+      min-height: 22px;
+      margin: 10px 0 0;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
     .discussion-grid {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -242,6 +352,18 @@
       .discussion-grid,
       .food-list {
         grid-template-columns: 1fr;
+      }
+
+      .plan-card {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .drag-handle {
+        display: none;
+      }
+
+      .move-controls {
+        flex-direction: row;
       }
     }
 
@@ -348,6 +470,138 @@
       </div>
     </section>
 
+    <section aria-labelledby="free-plan-title">
+      <div class="section-head">
+        <h2 id="free-plan-title">自由挪移活動草稿</h2>
+        <div class="note">拖曳卡片可以試排行程順序，這個排序會先存在你自己的瀏覽器。</div>
+      </div>
+      <div class="planner-actions">
+        <button class="action-button" type="button" id="copyPlan">複製目前排序</button>
+        <button class="action-button" type="button" id="resetPlan">回到原本排序</button>
+      </div>
+      <div class="draggable-list" id="planList" aria-live="polite">
+        <article class="plan-card" draggable="true" data-id="arrival">
+          <div class="drag-handle" aria-hidden="true">⋮⋮</div>
+          <div>
+            <h3><span class="day-label">Day 1</span>｜抵達石垣，低耗能適應日</h3>
+            <p>放行李、公設市場 / Euglena Mall、咖啡休息。16:00 check-in 後看體力決定川平灣或夕陽。</p>
+            <div class="plan-meta">
+              <span class="mini-tag">石垣</span>
+              <span class="mini-tag">咖啡</span>
+              <span class="mini-tag">可選手作</span>
+              <span class="mini-tag">石垣牛</span>
+            </div>
+          </div>
+          <div class="move-controls" aria-label="移動這一天">
+            <button class="move-button" type="button" data-move="up" aria-label="往上移">↑</button>
+            <button class="move-button" type="button" data-move="down" aria-label="往下移">↓</button>
+          </div>
+        </article>
+        <article class="plan-card" draggable="true" data-id="manta">
+          <div class="drag-handle" aria-hidden="true">⋮⋮</div>
+          <div>
+            <h3><span class="day-label">Day 2</span>｜Manta City 海洋重頭戲</h3>
+            <p>早上川平外海看魟魚，下午回市區休息、公設市場漢堡和冰，晚上海人居酒屋，可接觀星。</p>
+            <div class="plan-meta">
+              <span class="mini-tag">石垣</span>
+              <span class="mini-tag">魟魚</span>
+              <span class="mini-tag">市場</span>
+              <span class="mini-tag">觀星候補</span>
+            </div>
+          </div>
+          <div class="move-controls" aria-label="移動這一天">
+            <button class="move-button" type="button" data-move="up" aria-label="往上移">↑</button>
+            <button class="move-button" type="button" data-move="down" aria-label="往下移">↓</button>
+          </div>
+        </article>
+        <article class="plan-card" draggable="true" data-id="miyako-land">
+          <div class="drag-handle" aria-hidden="true">⋮⋮</div>
+          <div>
+            <h3><span class="day-label">Day 3</span>｜飛宮古，宮古陸地日</h3>
+            <p>一早石垣飛宮古、取車，下午跑伊良部大橋、17END、渡口之濱和展望點。</p>
+            <div class="plan-meta">
+              <span class="mini-tag">宮古</span>
+              <span class="mini-tag">租車</span>
+              <span class="mini-tag">大橋</span>
+              <span class="mini-tag">在地料理</span>
+            </div>
+          </div>
+          <div class="move-controls" aria-label="移動這一天">
+            <button class="move-button" type="button" data-move="up" aria-label="往上移">↑</button>
+            <button class="move-button" type="button" data-move="down" aria-label="往下移">↓</button>
+          </div>
+        </article>
+        <article class="plan-card" draggable="true" data-id="miyako-diving">
+          <div class="drag-handle" aria-hidden="true">⋮⋮</div>
+          <div>
+            <h3><span class="day-label">Day 4</span>｜宮古海洋日，八重干瀨 3 dives</h3>
+            <p>八重干瀨必去，視海況加藍洞、伊良部或下地島潛點。潛完留宮古住一晚。</p>
+            <div class="plan-meta">
+              <span class="mini-tag">宮古</span>
+              <span class="mini-tag">八重干瀨</span>
+              <span class="mini-tag">3 支氣瓶</span>
+              <span class="mini-tag">不搬家</span>
+            </div>
+          </div>
+          <div class="move-controls" aria-label="移動這一天">
+            <button class="move-button" type="button" data-move="up" aria-label="往上移">↑</button>
+            <button class="move-button" type="button" data-move="down" aria-label="往下移">↓</button>
+          </div>
+        </article>
+        <article class="plan-card" draggable="true" data-id="ishigaki-culture">
+          <div class="drag-handle" aria-hidden="true">⋮⋮</div>
+          <div>
+            <h3><span class="day-label">Day 5</span>｜回石垣，陸地文化日</h3>
+            <p>宮古飛回石垣，安排石垣島鍾乳洞，再選 みんさー織、辣油手作或 Shisa 彩繪。</p>
+            <div class="plan-meta">
+              <span class="mini-tag">石垣</span>
+              <span class="mini-tag">鐘乳洞</span>
+              <span class="mini-tag">手作</span>
+              <span class="mini-tag">低曝曬</span>
+            </div>
+          </div>
+          <div class="move-controls" aria-label="移動這一天">
+            <button class="move-button" type="button" data-move="up" aria-label="往上移">↑</button>
+            <button class="move-button" type="button" data-move="down" aria-label="往下移">↓</button>
+          </div>
+        </article>
+        <article class="plan-card" draggable="true" data-id="island-hop">
+          <div class="drag-handle" aria-hidden="true">⋮⋮</div>
+          <div>
+            <h3><span class="day-label">Day 6</span>｜八重山輕跳島</h3>
+            <p>上午竹富島腳踏車或水牛車，中午吃八重山そば，下午小濱島電動腳踏車。</p>
+            <div class="plan-meta">
+              <span class="mini-tag">竹富</span>
+              <span class="mini-tag">小濱</span>
+              <span class="mini-tag">騎車</span>
+              <span class="mini-tag">そば</span>
+            </div>
+          </div>
+          <div class="move-controls" aria-label="移動這一天">
+            <button class="move-button" type="button" data-move="up" aria-label="往上移">↑</button>
+            <button class="move-button" type="button" data-move="down" aria-label="往下移">↓</button>
+          </div>
+        </article>
+        <article class="plan-card" draggable="true" data-id="return">
+          <div class="drag-handle" aria-hidden="true">⋮⋮</div>
+          <div>
+            <h3><span class="day-label">Day 7</span>｜回程</h3>
+            <p>依航班安排市區補買伴手禮，前往機場。若時間充裕，可補咖啡或市場小吃。</p>
+            <div class="plan-meta">
+              <span class="mini-tag">回程</span>
+              <span class="mini-tag">伴手禮</span>
+              <span class="mini-tag">彈性</span>
+            </div>
+          </div>
+          <div class="move-controls" aria-label="移動這一天">
+            <button class="move-button" type="button" data-move="up" aria-label="往上移">↑</button>
+            <button class="move-button" type="button" data-move="down" aria-label="往下移">↓</button>
+          </div>
+        </article>
+      </div>
+      <p class="save-state" id="saveState">目前使用原本排序。</p>
+    </section>
+
     <section aria-labelledby="food-title">
       <div class="section-head">
         <h2 id="food-title">食物主題</h2>
@@ -434,5 +688,135 @@
       版本：旅伴討論草案。待補：實際航班時間、住宿位置、租車狀態、潛店預約結果、餐廳名單。
     </footer>
   </main>
+  <script>
+    const storageKey = "ishigakiMiyakoPlanOrder";
+    const list = document.querySelector("#planList");
+    const saveState = document.querySelector("#saveState");
+    const resetButton = document.querySelector("#resetPlan");
+    const copyButton = document.querySelector("#copyPlan");
+    const originalOrder = Array.from(list.children).map((card) => card.dataset.id);
+
+    function cards() {
+      return Array.from(list.querySelectorAll(".plan-card"));
+    }
+
+    function updateLabels(message) {
+      cards().forEach((card, index) => {
+        card.querySelector(".day-label").textContent = `Day ${index + 1}`;
+      });
+      if (message) {
+        saveState.textContent = message;
+      }
+    }
+
+    function saveOrder() {
+      const order = cards().map((card) => card.dataset.id);
+      localStorage.setItem(storageKey, JSON.stringify(order));
+      updateLabels("已儲存這台裝置上的排序草稿。");
+    }
+
+    function applyOrder(order) {
+      const byId = new Map(cards().map((card) => [card.dataset.id, card]));
+      order.forEach((id) => {
+        const card = byId.get(id);
+        if (card) {
+          list.appendChild(card);
+        }
+      });
+      cards()
+        .filter((card) => !order.includes(card.dataset.id))
+        .forEach((card) => list.appendChild(card));
+      updateLabels("已載入這台裝置上次儲存的排序草稿。");
+    }
+
+    function getDragAfterElement(y) {
+      const candidates = cards().filter((card) => !card.classList.contains("dragging"));
+      return candidates.reduce(
+        (closest, child) => {
+          const box = child.getBoundingClientRect();
+          const offset = y - box.top - box.height / 2;
+          if (offset < 0 && offset > closest.offset) {
+            return { offset, element: child };
+          }
+          return closest;
+        },
+        { offset: Number.NEGATIVE_INFINITY, element: null }
+      ).element;
+    }
+
+    list.addEventListener("dragstart", (event) => {
+      const card = event.target.closest(".plan-card");
+      if (!card) return;
+      card.classList.add("dragging");
+      event.dataTransfer.effectAllowed = "move";
+      event.dataTransfer.setData("text/plain", card.dataset.id);
+    });
+
+    list.addEventListener("dragend", (event) => {
+      const card = event.target.closest(".plan-card");
+      if (!card) return;
+      card.classList.remove("dragging");
+      saveOrder();
+    });
+
+    list.addEventListener("dragover", (event) => {
+      event.preventDefault();
+      const dragging = list.querySelector(".dragging");
+      if (!dragging) return;
+      const afterElement = getDragAfterElement(event.clientY);
+      if (afterElement) {
+        list.insertBefore(dragging, afterElement);
+      } else {
+        list.appendChild(dragging);
+      }
+    });
+
+    list.addEventListener("click", (event) => {
+      const button = event.target.closest("[data-move]");
+      if (!button) return;
+      const card = button.closest(".plan-card");
+      const direction = button.dataset.move;
+      if (direction === "up" && card.previousElementSibling) {
+        list.insertBefore(card, card.previousElementSibling);
+        saveOrder();
+      }
+      if (direction === "down" && card.nextElementSibling) {
+        list.insertBefore(card.nextElementSibling, card);
+        saveOrder();
+      }
+    });
+
+    resetButton.addEventListener("click", () => {
+      applyOrder(originalOrder);
+      localStorage.removeItem(storageKey);
+      updateLabels("已回到原本排序。");
+    });
+
+    copyButton.addEventListener("click", async () => {
+      const summary = cards()
+        .map((card, index) => {
+          const title = card.querySelector("h3").textContent.replace(/\s+/g, " ").trim();
+          return `${index + 1}. ${title}`;
+        })
+        .join("\n");
+      try {
+        await navigator.clipboard.writeText(summary);
+        saveState.textContent = "已複製目前排序，可以貼到群組討論。";
+      } catch {
+        saveState.textContent = summary;
+      }
+    });
+
+    try {
+      const savedOrder = JSON.parse(localStorage.getItem(storageKey) || "null");
+      if (Array.isArray(savedOrder)) {
+        applyOrder(savedOrder);
+      } else {
+        updateLabels("目前使用原本排序。");
+      }
+    } catch {
+      updateLabels("目前使用原本排序。");
+    }
+  </script>
 </body>
 </html>
