@@ -554,6 +554,70 @@
       transform: translateX(-50%);
     }
 
+    .shisa-face.illustration {
+      width: 112px;
+      height: 112px;
+      border: 0;
+      border-radius: 0;
+      background: transparent;
+      box-shadow: none;
+      overflow: visible;
+      transform-origin: 50% 88%;
+    }
+
+    .shisa-face.illustration::before,
+    .shisa-face.illustration::after {
+      content: "";
+      position: absolute;
+      top: 7px;
+      width: 28px;
+      height: 22px;
+      border: 0;
+      border-radius: 999px;
+      background:
+        radial-gradient(circle at 28% 58%, rgba(255, 255, 255, 0.96) 0 5px, transparent 6px),
+        radial-gradient(circle at 56% 36%, rgba(255, 255, 255, 0.86) 0 7px, transparent 8px),
+        radial-gradient(circle at 76% 66%, rgba(255, 255, 255, 0.78) 0 5px, transparent 6px);
+      box-shadow: 0 2px 5px rgba(76, 43, 33, 0.09);
+      opacity: 0;
+      pointer-events: none;
+      z-index: 2;
+    }
+
+    .shisa-face.illustration img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      filter: drop-shadow(0 8px 10px rgba(76, 43, 33, 0.18));
+    }
+
+    .shisa-face.illustration::before {
+      left: -4px;
+      transform: rotate(-18deg) scale(0.55);
+    }
+
+    .shisa-face.illustration::after {
+      right: -4px;
+      transform: rotate(18deg) scale(0.55);
+    }
+
+    .shisa-toast.show .shisa-face.illustration {
+      animation: shisa-stomp 900ms cubic-bezier(0.2, 0.9, 0.2, 1), shisa-idle 1400ms ease-in-out 900ms infinite;
+    }
+
+    .shisa-toast.show .shisa-face.illustration img {
+      animation: shisa-huff 900ms ease;
+    }
+
+    .shisa-toast.show .shisa-face.illustration::before {
+      animation: steam-left 900ms ease-out both;
+    }
+
+    .shisa-toast.show .shisa-face.illustration::after {
+      animation: steam-right 900ms ease-out both;
+    }
+
     @keyframes toast-pop {
       0% {
         transform: translateY(14px) scale(0.92);
@@ -584,6 +648,64 @@
       }
     }
 
+    @keyframes shisa-stomp {
+      0% {
+        transform: translateY(12px) scale(0.9);
+      }
+      16% {
+        transform: translateY(-5px) rotate(-4deg) scale(1.08);
+      }
+      31% {
+        transform: translateY(3px) rotate(4deg) scale(0.98);
+      }
+      47% {
+        transform: translateY(-3px) rotate(-3deg) scale(1.06);
+      }
+      63% {
+        transform: translateY(1px) rotate(2deg) scale(1.01);
+      }
+      100% {
+        transform: translateY(0) rotate(0deg) scale(1);
+      }
+    }
+
+    @keyframes shisa-huff {
+      0%, 100% {
+        filter: drop-shadow(0 8px 10px rgba(76, 43, 33, 0.18)) saturate(1);
+      }
+      28%, 58% {
+        filter: drop-shadow(0 10px 12px rgba(76, 43, 33, 0.24)) saturate(1.16) contrast(1.04);
+      }
+    }
+
+    @keyframes steam-left {
+      0% {
+        opacity: 0;
+        transform: translate(12px, 18px) rotate(-18deg) scale(0.35);
+      }
+      24% {
+        opacity: 0.95;
+      }
+      100% {
+        opacity: 0;
+        transform: translate(-18px, -18px) rotate(-28deg) scale(1.15);
+      }
+    }
+
+    @keyframes steam-right {
+      0% {
+        opacity: 0;
+        transform: translate(-12px, 18px) rotate(18deg) scale(0.35);
+      }
+      24% {
+        opacity: 0.95;
+      }
+      100% {
+        opacity: 0;
+        transform: translate(18px, -18px) rotate(28deg) scale(1.15);
+      }
+    }
+
     @keyframes shisa-idle {
       0%, 100% {
         transform: translateY(0);
@@ -597,7 +719,10 @@
       .shisa-toast,
       .shisa-toast.show,
       .shisa-face,
-      .shisa-toast.show .shisa-face {
+      .shisa-toast.show .shisa-face,
+      .shisa-face.illustration img,
+      .shisa-face.illustration::before,
+      .shisa-face.illustration::after {
         animation: none;
         transition: none;
       }
@@ -769,15 +894,15 @@
               <td class="day">Day 3<br>飛宮古・陸地日</td>
               <td>一早石垣飛宮古；取車。</td>
               <td>伊良部大橋、17END、渡口之濱、展望台。</td>
-              <td class="empty">待討論</td>
-              <td>宮古在地料理。</td>
+              <td>宮古そば / 食堂定食，價格優先。</td>
+              <td>平良市區食堂、超市熟食，便宜優先。</td>
             </tr>
             <tr>
               <td class="day">Day 4<br>宮古海洋日</td>
               <td>八重干瀨潛水。</td>
               <td>3 支氣瓶潛水；視海況加藍洞 / 伊良部 / 下地島潛點。</td>
               <td>船上 / 潛店安排。</td>
-              <td>潛水後輕鬆吃，不跑遠。</td>
+              <td>潛水後輕鬆吃；便利商店 / 超市 / 近飯店食堂。</td>
             </tr>
             <tr>
               <td class="day">Day 5<br>回石垣・陸地文化日</td>
@@ -837,9 +962,9 @@
           <h3>Day 3｜飛宮古・陸地日</h3>
           <div class="slot-grid">
             <div class="slot" data-slot="morning"><div class="slot-title">上午活動</div><div class="activity-block" draggable="true" data-id="d3-morning" data-type="morning" data-zones="miyako"><strong>一早石垣飛宮古、取車</strong><span>抵達後先把交通搞定。</span></div></div>
-            <div class="slot" data-slot="lunch"><div class="slot-title">中餐吃什麼</div><div class="activity-block" draggable="true" data-id="d3-lunch" data-type="lunch" data-zones="miyako"><strong>宮古午餐待討論</strong><span>可找宮古そば或咖啡簡餐。</span></div></div>
+            <div class="slot" data-slot="lunch"><div class="slot-title">中餐吃什麼</div><div class="activity-block" draggable="true" data-id="d3-lunch" data-type="lunch" data-zones="miyako"><strong>宮古そば / 食堂定食</strong><span>價格優先，不追網美店。</span></div></div>
             <div class="slot" data-slot="afternoon"><div class="slot-title">下午活動</div><div class="activity-block" draggable="true" data-id="d3-afternoon" data-type="afternoon" data-zones="miyako"><strong>伊良部大橋、17END、渡口之濱</strong><span>宮古藍入門日。</span></div></div>
-            <div class="slot" data-slot="dinner"><div class="slot-title">晚餐吃什麼</div><div class="activity-block" draggable="true" data-id="d3-dinner" data-type="dinner" data-zones="miyako"><strong>宮古在地料理</strong><span>宮古そば、島豆腐、海葡萄、泡盛。</span></div></div>
+            <div class="slot" data-slot="dinner"><div class="slot-title">晚餐吃什麼</div><div class="activity-block" draggable="true" data-id="d3-dinner" data-type="dinner" data-zones="miyako"><strong>平良市區便宜晚餐</strong><span>食堂、超市熟食、宮古そば優先。</span></div></div>
           </div>
         </article>
         <article class="day-board" data-day="4" data-zone="miyako">
@@ -848,7 +973,7 @@
             <div class="slot" data-slot="morning"><div class="slot-title">上午活動</div><div class="activity-block" draggable="true" data-id="d4-morning" data-type="morning" data-zones="miyako"><strong>八重干瀨潛水</strong><span>必去主菜。</span></div></div>
             <div class="slot" data-slot="lunch"><div class="slot-title">中餐吃什麼</div><div class="activity-block" draggable="true" data-id="d4-lunch" data-type="lunch" data-zones="miyako"><strong>船上 / 潛店安排</strong><span>不要安排太複雜。</span></div></div>
             <div class="slot" data-slot="afternoon"><div class="slot-title">下午活動</div><div class="activity-block" draggable="true" data-id="d4-afternoon" data-type="afternoon" data-zones="miyako"><strong>3 支氣瓶，視海況加藍洞</strong><span>也可能改伊良部 / 下地島潛點。</span></div></div>
-            <div class="slot" data-slot="dinner"><div class="slot-title">晚餐吃什麼</div><div class="activity-block" draggable="true" data-id="d4-dinner" data-type="dinner" data-zones="miyako"><strong>潛水後輕鬆吃</strong><span>留宮古住一晚，不跑遠。</span></div></div>
+            <div class="slot" data-slot="dinner"><div class="slot-title">晚餐吃什麼</div><div class="activity-block" draggable="true" data-id="d4-dinner" data-type="dinner" data-zones="miyako"><strong>潛水後省錢晚餐</strong><span>便利商店 / 超市 / 近飯店食堂，不跑遠。</span></div></div>
           </div>
         </article>
         <article class="day-board" data-day="5" data-zone="ishigaki">
@@ -898,7 +1023,7 @@
         </div>
         <div class="food-card">
           <strong>在地料理</strong>
-          <p>宮古島安排宮古そば、島豆腐、海葡萄、泡盛等地方料理。</p>
+          <p>宮古島先以宮古そば、食堂定食、超市熟食為主，價格最便宜取勝。</p>
         </div>
         <div class="food-card">
           <strong>公設市場</strong>
@@ -910,9 +1035,39 @@
         </div>
         <div class="food-card">
           <strong>潛水後晚餐</strong>
-          <p>Day 4 不跑遠，吃舒服、洗澡、休息最重要。</p>
+          <p>Day 4 不跑遠，便利商店 / 超市 / 近飯店食堂即可，洗澡、休息最重要。</p>
         </div>
       </div>
+    </section>
+
+    <section aria-labelledby="miyako-budget-title">
+      <div class="section-head">
+        <h2 id="miyako-budget-title">宮古島住宿與飲食：便宜優先</h2>
+        <div class="note">原則：價格最便宜取勝；飯店和餐廳之後依實際日期再比價。</div>
+      </div>
+      <div class="discussion-grid">
+        <article class="item">
+          <h3><span class="tag">住宿</span> 優先住平良市區</h3>
+          <p>先找平良市區、平良港附近或主要道路旁的商務旅館 / 公寓式旅館。吃飯、超市、藥妝、租車點都比較集中，晚上不用多花交通費。</p>
+          <p class="leaning">目前傾向：不追海景。乾淨、可停車、價格低、離晚餐近，比漂亮飯店更重要。</p>
+        </article>
+        <article class="item">
+          <h3><span class="tag">候選</span> 先比這幾類</h3>
+          <p>Mr. Kinjo 系列、公寓式旅館、Hotel Peace Island、Hotel Rising Sun、Hotel Torifito 這類商務 / 平價型住宿先列入比價。</p>
+          <p class="leaning">篩選順序：總價最低 → 可免費取消 → 有停車 → 離平良晚餐區近 → 評分不要太低。</p>
+        </article>
+        <article class="item">
+          <h3><span class="tag">飲食</span> 超市與食堂優先</h3>
+          <p>宮古 Day 3、Day 4 不把錢花在餐廳氣氛上。午餐找宮古そば / 食堂定食；晚餐可用超市熟食、便當、簡單居酒屋或近飯店食堂解決。</p>
+          <p class="leaning">便宜路線：サンエー、かねひで、マックスバリュ買熟食 / 飲料 / 隔天早餐，最穩也最省。</p>
+        </article>
+        <article class="item">
+          <h3><span class="tag">吃法</span> 宮古兩晚安排</h3>
+          <p>Day 3 晚餐吃平良市區便宜食堂或宮古そば；Day 4 潛水後不跑遠，飯店附近或超市買回去吃。</p>
+          <p class="leaning">目前傾向：宮古島不排昂貴晚餐，把預算留給八重干瀨 3 dives、租車與石垣牛。</p>
+        </article>
+      </div>
+      <p class="note">參考方向：Expedia / Tripadvisor 的平價住宿整理多指向平良市區與平價商務旅館；宮古島在地資訊也提到サンエー、かねひで、マックスバリュ等超市可作為省餐費補給點。實際店名與價格需用入住日期再查一次。</p>
     </section>
 
     <section aria-labelledby="discussion-title">
@@ -969,25 +1124,8 @@
     </footer>
   </main>
   <div class="shisa-toast" id="shisaToast" role="status" aria-live="polite">
-    <div class="shisa-face" aria-hidden="true">
-      <div class="shisa-mane"></div>
-      <div class="shisa-curl one"></div>
-      <div class="shisa-curl two"></div>
-      <div class="shisa-curl three"></div>
-      <div class="shisa-brow left"></div>
-      <div class="shisa-brow right"></div>
-      <div class="shisa-eye left"></div>
-      <div class="shisa-eye right"></div>
-      <div class="shisa-cheek left"></div>
-      <div class="shisa-cheek right"></div>
-      <div class="shisa-nose"></div>
-      <div class="shisa-snout"></div>
-      <div class="shisa-mouth"></div>
-      <div class="shisa-tooth left"></div>
-      <div class="shisa-tooth middle-left"></div>
-      <div class="shisa-tooth middle-right"></div>
-      <div class="shisa-tooth right"></div>
-      <div class="shisa-chin"></div>
+    <div class="shisa-face illustration" aria-hidden="true">
+      <img src="assets/shisa-mascot.png" alt="">
     </div>
     <div>
       <strong>風獅爺氣嘟嘟！</strong>
