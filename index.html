@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>石垣島・宮古島旅伴討論頁</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
   <style>
     :root {
       color-scheme: light;
@@ -154,6 +155,81 @@
       color: #9aa4a1;
     }
 
+    .map-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+      gap: 16px;
+    }
+
+    .map-panel {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      overflow: hidden;
+      background: #fbfcfa;
+    }
+
+    .map-panel h3 {
+      padding: 12px 14px;
+      color: #123d40;
+      background: #e7f1ef;
+      font-size: 17px;
+    }
+
+    .map-canvas {
+      height: 430px;
+      width: 100%;
+      background: #dfe9e6;
+    }
+
+    .map-legend {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 12px;
+      margin-top: 14px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .legend-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .legend-dot {
+      width: 11px;
+      height: 11px;
+      border-radius: 999px;
+      background: var(--sea);
+    }
+
+    .map-marker {
+      display: grid;
+      place-items: center;
+      width: 28px;
+      height: 28px;
+      border: 2px solid #fff;
+      border-radius: 999px;
+      color: #fff;
+      font-size: 12px;
+      font-weight: 900;
+      box-shadow: 0 4px 12px rgba(30, 58, 55, 0.22);
+    }
+
+    .map-popup strong {
+      color: var(--sea);
+    }
+
+    .map-popup p {
+      margin: 4px 0 0;
+    }
+
+    .map-fallback {
+      margin-top: 12px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
     .discussion-grid {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -244,6 +320,13 @@
         grid-template-columns: 1fr;
       }
 
+      .map-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .map-canvas {
+        height: 360px;
+      }
 
     }
 
@@ -437,6 +520,25 @@
           <p class="leaning">這可以補進 Day 2 下午與 Day 8 回程前，不必把每一天都塞成重型景點。</p>
         </article>
       </div>
+    </section>
+
+    <section aria-labelledby="map-title">
+      <div class="section-head">
+        <h2 id="map-title">地圖視覺化</h2>
+        <div class="note">討論版地圖：點位先用近似座標，正式排路線前再用 Google Maps 連結校正。</div>
+      </div>
+      <div class="map-grid">
+        <div class="map-panel">
+          <h3>石垣・八重山</h3>
+          <div class="map-canvas" id="ishigakiMap" aria-label="石垣與八重山候選地圖"></div>
+        </div>
+        <div class="map-panel">
+          <h3>宮古</h3>
+          <div class="map-canvas" id="miyakoMap" aria-label="宮古候選地圖"></div>
+        </div>
+      </div>
+      <div class="map-legend" id="mapLegend"></div>
+      <p class="map-fallback" id="mapFallback">如果地圖沒有載入，通常是地圖圖資 CDN 被擋；下方的「我的地點庫與順路路線」仍可作為文字版。</p>
     </section>
 
     <section aria-labelledby="place-library-title">
@@ -1016,10 +1118,142 @@
       </div>
     </section>
 
-    <footer>
+  <footer>
       版本：旅伴討論草案。待補：實際航班時間、住宿位置、非自駕交通安排、活動預約結果、餐廳名單。
     </footer>
   </main>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script>
+    const routeStyles = {
+      "ishigaki-city": { label: "石垣市區", color: "#116f77" },
+      "ishigaki-city-night": { label: "石垣夜間吃喝", color: "#d9822b" },
+      "ishigaki-west": { label: "石垣西線", color: "#0f8f88" },
+      "ishigaki-west-night": { label: "西線夜間自然", color: "#6b7280" },
+      "ishigaki-north": { label: "石垣北線", color: "#2563eb" },
+      "ishigaki-north-return": { label: "北線回程補貨", color: "#7c3aed" },
+      "ishigaki-culture": { label: "石垣文化室內", color: "#a16207" },
+      "ishigaki-marine": { label: "石垣海上活動", color: "#0284c7" },
+      "yaeyama-hop": { label: "八重山跳島", color: "#16a34a" },
+      "miyako-marine": { label: "宮古海洋", color: "#0891b2" },
+      "miyako-cave": { label: "宮古洞穴候選", color: "#be123c" }
+    };
+
+    const routeOrders = {
+      "ishigaki-city": ["ishigaki-public-market", "heart-land", "cacao-market", "kamiyaki-kokamabokoten", "klatch-coffee", "standuct"],
+      "ishigaki-city-night": ["sumibi-yakiniku-ishigakian", "hitoshi-ishiganto", "lumi-umi"],
+      "ishigaki-west": ["ishigaki-public-market", "mikan-no-shima-illmore", "kabira-bay", "sukuji-beach", "uganzaki"],
+      "ishigaki-north": ["ishigaki-public-market", "north-viewpoints", "coast-cafe-north", "hirakubo", "don-quijote-ishigaki"],
+      "yaeyama-hop": ["ishigaki-public-market", "taketomi", "kohama"],
+      "miyako-marine": ["blue-cave-yabiji"],
+      "miyako-cave": ["pumpkin-cave"]
+    };
+
+    function markerIcon(place) {
+      const style = routeStyles[place.routeGroup] || { color: "#116f77" };
+      const initial = place.name.trim().slice(0, 1);
+      return L.divIcon({
+        className: "",
+        html: `<div class="map-marker" style="background:${style.color}">${initial}</div>`,
+        iconSize: [28, 28],
+        iconAnchor: [14, 14],
+        popupAnchor: [0, -14]
+      });
+    }
+
+    function popupHtml(place) {
+      const style = routeStyles[place.routeGroup] || { label: place.routeGroup || "未分組" };
+      const precision = place.coordinates?.precision === "approx" ? "近似座標" : "精準座標";
+      return `
+        <div class="map-popup">
+          <strong>${place.name}</strong>
+          <p>${style.label}｜${(place.category || []).join("、")}</p>
+          <p>${place.notes || ""}</p>
+          <p>${precision}</p>
+        </div>
+      `;
+    }
+
+    function addRouteLines(map, places, groupNames) {
+      const byId = new Map(places.map((place) => [place.id, place]));
+      groupNames.forEach((group) => {
+        const style = routeStyles[group];
+        const points = (routeOrders[group] || [])
+          .map((id) => byId.get(id))
+          .filter((place) => place?.coordinates)
+          .map((place) => [place.coordinates.lat, place.coordinates.lng]);
+        if (points.length > 1) {
+          L.polyline(points, {
+            color: style?.color || "#116f77",
+            weight: 3,
+            opacity: 0.72,
+            dashArray: group.includes("night") ? "6 6" : null
+          }).addTo(map);
+        }
+      });
+    }
+
+    function addMarkers(map, places) {
+      const bounds = [];
+      places.forEach((place) => {
+        if (!place.coordinates) return;
+        const latlng = [place.coordinates.lat, place.coordinates.lng];
+        bounds.push(latlng);
+        L.marker(latlng, { icon: markerIcon(place), title: place.name })
+          .bindPopup(popupHtml(place))
+          .addTo(map);
+      });
+      if (bounds.length) {
+        map.fitBounds(bounds, { padding: [28, 28] });
+      }
+    }
+
+    function buildLegend() {
+      const legend = document.querySelector("#mapLegend");
+      legend.innerHTML = Object.entries(routeStyles)
+        .map(([group, style]) => `<span class="legend-item"><span class="legend-dot" style="background:${style.color}"></span>${style.label}</span>`)
+        .join("");
+    }
+
+    async function initMaps() {
+      const fallback = document.querySelector("#mapFallback");
+      if (!window.L) {
+        fallback.textContent = "地圖元件沒有載入；請確認網路或直接看下方文字版路線。";
+        return;
+      }
+      const response = await fetch("assets/places.json");
+      const data = await response.json();
+      const places = data.places.filter((place) => place.coordinates);
+      const ishigakiPlaces = places.filter((place) => ["ishigaki", "yaeyama"].includes(place.island));
+      const miyakoPlaces = places.filter((place) => place.island === "miyako");
+
+      const ishigakiMap = L.map("ishigakiMap", { scrollWheelZoom: false });
+      const miyakoMap = L.map("miyakoMap", { scrollWheelZoom: false });
+      [ishigakiMap, miyakoMap].forEach((map) => {
+        L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+          maxZoom: 18,
+          attribution: "&copy; OpenStreetMap"
+        }).addTo(map);
+      });
+
+      addRouteLines(ishigakiMap, ishigakiPlaces, [
+        "ishigaki-city",
+        "ishigaki-city-night",
+        "ishigaki-west",
+        "ishigaki-north",
+        "yaeyama-hop"
+      ]);
+      addMarkers(ishigakiMap, ishigakiPlaces);
+
+      addRouteLines(miyakoMap, miyakoPlaces, ["miyako-marine", "miyako-cave"]);
+      addMarkers(miyakoMap, miyakoPlaces);
+      buildLegend();
+      fallback.textContent = "地圖點位目前是討論用近似座標；正式版會用 Google Maps 連結逐一校正。";
+    }
+
+    initMaps().catch(() => {
+      document.querySelector("#mapFallback").textContent = "地圖資料讀取失敗；請重新整理或先看文字版路線。";
+    });
+  </script>
 </body>
 </html>
 
