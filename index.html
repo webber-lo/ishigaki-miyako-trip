@@ -190,10 +190,14 @@
       font-size: 13px;
     }
 
+    .legend-item,
     .layer-button {
       display: inline-flex;
       align-items: center;
       gap: 6px;
+    }
+
+    .layer-button {
       min-height: 34px;
       padding: 5px 10px;
       border: 1px solid var(--line);
@@ -581,8 +585,18 @@
         </article>
         <article class="item">
           <h3><span class="tag">市區</span> 吃喝購物懶人線</h3>
-          <p>公設市場 / Euglena Mall → HEART LAND → CACAO MARKET → Kamiyaki Kokamabokoten → KLATCH COFFEE 或 STANDUCT → Lumi Umi → Hitoshi Ishiganto。</p>
+          <p>公設市場 / Euglena Mall → Hau Tree Gelato → Coral Tree Cafe → KLATCH COFFEE 或 FUSHI COFFEE ROASTERS → Waizu → Lumi Umi → Hitoshi Ishiganto。</p>
           <p class="leaning">適合 Day 2 Manta City 後、雨天、太熱、或 Day 8 回程前。這條線是最不怕天氣的安全牌。</p>
+        </article>
+        <article class="item">
+          <h3><span class="tag">早餐</span> 早開店與咖啡甜點</h3>
+          <p>早開：SEVEN BELLS、石垣島のおにぎり屋 / niginigi、KLATCH COFFEE、Asakara Hirugohan。甜點：Hau Tree Gelato、Mirumiru Hompo Honten。</p>
+          <p class="leaning">潛水日用外帶飯糰或麵包；市區慢早晨選 Asakara。Mirumiru 本店在西線，適合川平灣或夕陽路線，不要硬塞進純市區散步。</p>
+        </article>
+        <article class="item">
+          <h3><span class="tag">午餐</span> 在地料理與換口味</h3>
+          <p>あらだ家：石垣島料理、老屋。ウシのカドデ：牛湯底中華そば。Travelers' cafe 朔：咖哩與車海老カレー。</p>
+          <p class="leaning">這三家都適合放在市區東側或機場方向前後。吃膩燒肉、居酒屋時，咖哩和拉麵會是很好的換氣口。</p>
         </article>
         <article class="item">
           <h3><span class="tag">晚餐</span> 石垣夜間吃法</h3>
@@ -628,8 +642,8 @@
             </tr>
             <tr>
               <td class="day">ishigaki-city</td>
-              <td>公設市場、HEART LAND、CACAO MARKET、Kamiyaki、KLATCH、STANDUCT。</td>
-              <td>中午到下午</td>
+              <td>公設市場、Hau Tree Gelato、Coral Tree Cafe、KLATCH、FUSHI、Waizu、Asakara、SEVEN BELLS、niginigi、あらだ家、ウシのカドデ、Travelers' cafe 朔。</td>
+              <td>早上到下午</td>
               <td>Day 1、Day 2、Day 8</td>
               <td>營業時間、週休、是否需要排隊。</td>
             </tr>
@@ -1178,7 +1192,11 @@
 
     function popupHtml(place) {
       const style = routeStyles[place.routeGroup] || { label: place.routeGroup || "未分組" };
-      const precision = place.coordinates?.precision === "approx" ? "近似座標" : "精準座標";
+      const precision = place.coordinates?.precision === "approx"
+        ? "近似座標"
+        : place.coordinates?.precision === "source"
+          ? "資料來源座標"
+          : "精準座標";
       return `
         <div class="map-popup">
           <strong>${place.name}</strong>

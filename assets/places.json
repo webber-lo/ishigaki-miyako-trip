@@ -1,6 +1,6 @@
-﻿{
+{
     "version":  1,
-    "updated":  "2026-05-05",
+    "updated":  "2026-05-06",
     "notes":  "Personal place library collected during Ishigaki / Miyako trip planning. Coordinates are approximate for visual route discussion until each Google Maps link is confirmed.",
     "places":  [
                    {
@@ -143,9 +143,12 @@
                        "area":  "city",
                        "category":  [
                                         "cafe",
+                                        "breakfast",
+                                        "sandwich",
                                         "rest"
                                     ],
                        "bestSlots":  [
+                                         "morning",
                                          "afternoon"
                                      ],
                        "routeGroup":  "ishigaki-city",
@@ -155,7 +158,253 @@
                                            "lng":  124.156,
                                            "precision":  "approx"
                                        },
-                       "notes":  "市區咖啡休息點，和 STANDUCT 擇一即可。"
+                       "notes":  "7:00 營業咖啡店，熱三明治。市區早餐、等房、避暑休息都好用。"
+                   },
+                   {
+                       "id":  "hau-tree-gelato",
+                       "name":  "Hau Tree Gelato",
+                       "island":  "ishigaki",
+                       "area":  "city",
+                       "category":  [
+                                        "dessert",
+                                        "gelato",
+                                        "fruit"
+                                    ],
+                       "bestSlots":  [
+                                         "afternoon"
+                                     ],
+                       "routeGroup":  "ishigaki-city",
+                       "priority":  "high",
+                       "coordinates":  {
+                                           "lat":  24.3382,
+                                           "lng":  124.1552,
+                                           "precision":  "approx"
+                                       },
+                       "notes":  "石垣島產牛奶與水果的冰淇淋店。推薦芒果、火龍果香檸；公設市場周邊甜點候選。"
+                   },
+                   {
+                       "id":  "arada-ya",
+                       "name":  "あらだ家",
+                       "island":  "ishigaki",
+                       "area":  "city-edge",
+                       "category":  [
+                                        "restaurant",
+                                        "local-food",
+                                        "yaeyama-soba"
+                                    ],
+                       "bestSlots":  [
+                                         "lunch"
+                                     ],
+                       "routeGroup":  "ishigaki-city",
+                       "priority":  "option",
+                       "coordinates":  {
+                                           "lat":  24.3445,
+                                           "lng":  124.1695,
+                                           "precision":  "approx"
+                                       },
+                       "notes":  "石垣島料理、八重山そば候選。傳統老屋建築，店狗可愛；適合市區慢午餐。"
+                   },
+                   {
+                       "id":  "coral-tree-cafe",
+                       "name":  "Coral Tree Cafe",
+                       "island":  "ishigaki",
+                       "area":  "city",
+                       "category":  [
+                                        "cafe",
+                                        "coffee",
+                                        "lunch"
+                                    ],
+                       "bestSlots":  [
+                                         "lunch",
+                                         "afternoon"
+                                     ],
+                       "routeGroup":  "ishigaki-city",
+                       "priority":  "option",
+                       "coordinates":  {
+                                           "lat":  24.340006,
+                                           "lng":  124.157452,
+                                           "precision":  "source"
+                                       },
+                       "notes":  "法式濾壓壺咖啡。位於 Euglena Mall / 公設市場附近，適合市區閒晃中段休息。"
+                   },
+                   {
+                       "id":  "waidu-cafe",
+                       "name":  "珈琲家和居津 / Waizu",
+                       "island":  "ishigaki",
+                       "area":  "city",
+                       "category":  [
+                                        "cafe",
+                                        "coffee",
+                                        "french-toast"
+                                    ],
+                       "bestSlots":  [
+                                         "afternoon"
+                                     ],
+                       "routeGroup":  "ishigaki-city",
+                       "priority":  "high",
+                       "coordinates":  {
+                                           "lat":  24.3418,
+                                           "lng":  124.1539,
+                                           "precision":  "approx"
+                                       },
+                       "notes":  "法式吐司必點，環境舒適的古民家咖啡店。適合排成市區下午茶。"
+                   },
+                   {
+                       "id":  "fushi-coffee-roasters",
+                       "name":  "FUSHI COFFEE ROASTERS",
+                       "island":  "ishigaki",
+                       "area":  "city",
+                       "category":  [
+                                        "cafe",
+                                        "coffee",
+                                        "roaster"
+                                    ],
+                       "bestSlots":  [
+                                         "morning",
+                                         "afternoon"
+                                     ],
+                       "routeGroup":  "ishigaki-city",
+                       "priority":  "high",
+                       "coordinates":  {
+                                           "lat":  24.3379,
+                                           "lng":  124.1582,
+                                           "precision":  "approx"
+                                       },
+                       "notes":  "烘豆冠軍咖啡店。咖啡優先級高，可和公設市場、Euglena Mall 串成市區散步。"
+                   },
+                   {
+                       "id":  "mirumiru-hompo-honten",
+                       "name":  "Mirumiru Hompo Honten / 石垣島ミルミル本舗 本店",
+                       "island":  "ishigaki",
+                       "area":  "west",
+                       "category":  [
+                                        "dessert",
+                                        "gelato",
+                                        "view"
+                                    ],
+                       "bestSlots":  [
+                                         "afternoon"
+                                     ],
+                       "routeGroup":  "ishigaki-west",
+                       "priority":  "high",
+                       "coordinates":  {
+                                           "lat":  24.371,
+                                           "lng":  124.112,
+                                           "precision":  "approx"
+                                       },
+                       "notes":  "石垣島在地冰淇淋品牌本店。名藏灣方向、有景觀，適合川平灣 / 西線回程或夕陽前後。"
+                   },
+                   {
+                       "id":  "seven-bells",
+                       "name":  "SEVEN BELLS",
+                       "island":  "ishigaki",
+                       "area":  "city-edge",
+                       "category":  [
+                                        "bakery",
+                                        "breakfast"
+                                    ],
+                       "bestSlots":  [
+                                         "morning"
+                                     ],
+                       "routeGroup":  "ishigaki-city",
+                       "priority":  "option",
+                       "coordinates":  {
+                                           "lat":  24.3405,
+                                           "lng":  124.1663,
+                                           "precision":  "approx"
+                                       },
+                       "notes":  "7:00 營業麵包店。適合早班船、潛水日前補早餐。"
+                   },
+                   {
+                       "id":  "niginigi-onigiri",
+                       "name":  "石垣島のおにぎり屋 / niginigi",
+                       "island":  "ishigaki",
+                       "area":  "city",
+                       "category":  [
+                                        "breakfast",
+                                        "onigiri",
+                                        "takeout"
+                                    ],
+                       "bestSlots":  [
+                                         "morning"
+                                     ],
+                       "routeGroup":  "ishigaki-city",
+                       "priority":  "option",
+                       "coordinates":  {
+                                           "lat":  24.342,
+                                           "lng":  124.1543,
+                                           "precision":  "approx"
+                                       },
+                       "notes":  "7:30 營業日式飯糰候選。適合搭船前外帶，或 Manta City 出發前輕食。"
+                   },
+                   {
+                       "id":  "asakara-hirugohan",
+                       "name":  "Asakara Hirugohan Japanese Breakfast & Lunch Diner",
+                       "island":  "ishigaki",
+                       "area":  "city",
+                       "category":  [
+                                        "breakfast",
+                                        "lunch",
+                                        "set-meal"
+                                    ],
+                       "bestSlots":  [
+                                         "morning",
+                                         "lunch"
+                                     ],
+                       "routeGroup":  "ishigaki-city",
+                       "priority":  "high",
+                       "coordinates":  {
+                                           "lat":  24.3395,
+                                           "lng":  124.1512,
+                                           "precision":  "approx"
+                                       },
+                       "notes":  "7:00 營業，和食、洋食早餐套餐。適合不想只吃便利商店的早晨。"
+                   },
+                   {
+                       "id":  "ushi-no-kadode",
+                       "name":  "石垣中華そば ウシのカドデ",
+                       "island":  "ishigaki",
+                       "area":  "city-edge",
+                       "category":  [
+                                        "restaurant",
+                                        "ramen",
+                                        "ishigaki-beef"
+                                    ],
+                       "bestSlots":  [
+                                         "lunch",
+                                         "dinner"
+                                     ],
+                       "routeGroup":  "ishigaki-city",
+                       "priority":  "option",
+                       "coordinates":  {
+                                           "lat":  24.3446,
+                                           "lng":  124.1796,
+                                           "precision":  "approx"
+                                       },
+                       "notes":  "牛湯底拉麵店。可當市區東側、機場方向前後的午餐或晚餐備案。"
+                   },
+                   {
+                       "id":  "travelers-cafe-saku",
+                       "name":  "Travelers' cafe 朔 / トラベラーズカフェ朔",
+                       "island":  "ishigaki",
+                       "area":  "city-edge",
+                       "category":  [
+                                        "restaurant",
+                                        "curry",
+                                        "cafe"
+                                    ],
+                       "bestSlots":  [
+                                         "lunch",
+                                         "dinner"
+                                     ],
+                       "routeGroup":  "ishigaki-city",
+                       "priority":  "high",
+                       "coordinates":  {
+                                           "lat":  24.3427,
+                                           "lng":  124.1699,
+                                           "precision":  "approx"
+                                       },
+                       "notes":  "大推咖哩，尤其車海老カレー。適合市區東側午餐，或吃膩燒肉海鮮時換口味。"
                    },
                    {
                        "id":  "cacao-market",
