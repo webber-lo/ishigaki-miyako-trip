@@ -903,6 +903,681 @@
                                            "precision":  "approx"
                                        },
                        "notes":  "伊良部島 / 下地島方向的在地超市，目標是下地島限定黑糖冰。地址查得為宮古島市伊良部伊良部22。Google Maps: https://maps.app.goo.gl/pJJs3hZGZ27KY1J58?g_st=ic"
+                   },
+                   {
+                       "id":  "blue-turtle-miyako",
+                       "name":  "Blue Turtle 海龜",
+                       "island":  "miyako",
+                       "area":  "shigira-ueno",
+                       "category":  [
+                                        "restaurant",
+                                        "cafe",
+                                        "beach"
+                                    ],
+                       "bestSlots":  [
+                                         "lunch",
+                                         "afternoon"
+                                     ],
+                       "routeGroup":  "miyako-food",
+                       "priority":  "option",
+                       "coordinates":  {
+                                           "lat":  24.721,
+                                           "lng":  125.323,
+                                           "precision":  "approx"
+                                       },
+                       "notes":  "358908.jpg 圖上 1。南岸 / Shigira 一帶吃喝候選，可和琉宮苑、Shigira Lift 同線。"
+                   },
+                   {
+                       "id":  "sunayama-beach",
+                       "name":  "Sunayama Beach / 砂山ビーチ",
+                       "island":  "miyako",
+                       "area":  "north-hirara",
+                       "category":  [
+                                        "beach",
+                                        "view"
+                                    ],
+                       "bestSlots":  [
+                                         "morning",
+                                         "afternoon"
+                                     ],
+                       "routeGroup":  "miyako-beach",
+                       "priority":  "high",
+                       "coordinates":  {
+                                           "lat":  24.819,
+                                           "lng":  125.278,
+                                           "precision":  "approx"
+                                       },
+                       "notes":  "358908.jpg 圖上 2。平良北側海灘候選，適合短停，不和池間 / 伊良部 / 東平安名崎全塞。"
+                   },
+                   {
+                       "id":  "irabu-bridge",
+                       "name":  "伊良部大橋",
+                       "island":  "miyako",
+                       "area":  "irabu",
+                       "category":  [
+                                        "bridge",
+                                        "view",
+                                        "drive"
+                                    ],
+                       "bestSlots":  [
+                                         "morning",
+                                         "afternoon"
+                                     ],
+                       "routeGroup":  "miyako-land",
+                       "priority":  "high",
+                       "coordinates":  {
+                                           "lat":  24.805,
+                                           "lng":  125.23,
+                                           "precision":  "approx"
+                                       },
+                       "notes":  "358908.jpg 圖上 3。若去伊良部 / 下地島，這是主線景觀；不自駕時用計程車或觀光計程車。"
+                   },
+                   {
+                       "id":  "harrys-shrimp-truck",
+                       "name":  "HARRY'S Shrimp Truck",
+                       "island":  "miyako",
+                       "area":  "irabu-shimoji",
+                       "category":  [
+                                        "restaurant",
+                                        "shrimp",
+                                        "snack"
+                                    ],
+                       "bestSlots":  [
+                                         "lunch",
+                                         "afternoon"
+                                     ],
+                       "routeGroup":  "miyako-food",
+                       "priority":  "option",
+                       "coordinates":  {
+                                           "lat":  24.833,
+                                           "lng":  125.17,
+                                           "precision":  "approx"
+                                       },
+                       "notes":  "358908.jpg 圖上 4。伊良部 / 下地島方向蝦餐車候選，與シモジスーパー同線。"
+                   },
+                   {
+                       "id":  "ikema-bridge-parking",
+                       "name":  "池間大橋旁停車場",
+                       "island":  "miyako",
+                       "area":  "ikema",
+                       "category":  [
+                                        "view",
+                                        "bridge",
+                                        "parking"
+                                    ],
+                       "bestSlots":  [
+                                         "morning",
+                                         "afternoon"
+                                     ],
+                       "routeGroup":  "miyako-land",
+                       "priority":  "option",
+                       "coordinates":  {
+                                           "lat":  24.891,
+                                           "lng":  125.253,
+                                           "precision":  "approx"
+                                       },
+                       "notes":  "358908.jpg 圖上 5。池間線停靠點，可和海美来、Gelato Cafe Ninufa、宮古きび茶屋搭配。"
+                   },
+                   {
+                       "id":  "gelato-cafe-ninufa",
+                       "name":  "Gelato Cafe Ninufa",
+                       "island":  "miyako",
+                       "area":  "ikema",
+                       "category":  [
+                                        "dessert",
+                                        "gelato",
+                                        "cafe"
+                                    ],
+                       "bestSlots":  [
+                                         "afternoon"
+                                     ],
+                       "routeGroup":  "miyako-food",
+                       "priority":  "option",
+                       "coordinates":  {
+                                           "lat":  24.928,
+                                           "lng":  125.249,
+                                           "precision":  "approx"
+                                       },
+                       "notes":  "358908.jpg 圖上 6。池間島甜點候選，順路才去。"
+                   },
+                   {
+                       "id":  "yonaha-maehama-beach",
+                       "name":  "Yonaha Beach / 與那覇前浜海灘",
+                       "island":  "miyako",
+                       "area":  "kurima",
+                       "category":  [
+                                        "beach",
+                                        "view"
+                                    ],
+                       "bestSlots":  [
+                                         "morning",
+                                         "afternoon"
+                                     ],
+                       "routeGroup":  "miyako-beach",
+                       "priority":  "high",
+                       "coordinates":  {
+                                           "lat":  24.735,
+                                           "lng":  125.263,
+                                           "precision":  "approx"
+                                       },
+                       "notes":  "358908.jpg 圖上 7。宮古代表性海灘，可與來間大橋 / 南岸線搭配。"
+                   },
+                   {
+                       "id":  "anantei-izakaya",
+                       "name":  "琉球居酒屋 あなん亭",
+                       "island":  "miyako",
+                       "area":  "hirara",
+                       "category":  [
+                                        "restaurant",
+                                        "izakaya"
+                                    ],
+                       "bestSlots":  [
+                                         "dinner"
+                                     ],
+                       "routeGroup":  "miyako-food",
+                       "priority":  "option",
+                       "coordinates":  {
+                                           "lat":  24.804,
+                                           "lng":  125.282,
+                                           "precision":  "approx"
+                                       },
+                       "notes":  "358908.jpg 圖上 8。平良市區晚餐候選，需查營業與預約。"
+                   },
+                   {
+                       "id":  "watermark-hotel-miyako",
+                       "name":  "Watermark Hotel",
+                       "island":  "miyako",
+                       "area":  "irabu-shimoji",
+                       "category":  [
+                                        "hotel",
+                                        "stay"
+                                    ],
+                       "bestSlots":  [
+                                         "dinner"
+                                     ],
+                       "routeGroup":  "miyako-hotel",
+                       "priority":  "reference",
+                       "coordinates":  {
+                                           "lat":  24.83,
+                                           "lng":  125.155,
+                                           "precision":  "approx"
+                                       },
+                       "notes":  "358908.jpg 圖上 9。伊良部 / 下地島住宿參考點，目前只作地圖理解。"
+                   },
+                   {
+                       "id":  "shigira-lift-ocean-sky",
+                       "name":  "The Shigira Lift Ocean Sky",
+                       "island":  "miyako",
+                       "area":  "shigira-ueno",
+                       "category":  [
+                                        "view",
+                                        "lift"
+                                    ],
+                       "bestSlots":  [
+                                         "afternoon"
+                                     ],
+                       "routeGroup":  "miyako-land",
+                       "priority":  "option",
+                       "coordinates":  {
+                                           "lat":  24.72,
+                                           "lng":  125.326,
+                                           "precision":  "approx"
+                                       },
+                       "notes":  "358908.jpg 圖上 11。Shigira 一帶景觀纜車，可與琉宮苑同線。"
+                   },
+                   {
+                       "id":  "yusarabi",
+                       "name":  "Yusarabi",
+                       "island":  "miyako",
+                       "area":  "shigira-ueno",
+                       "category":  [
+                                        "restaurant",
+                                        "cafe"
+                                    ],
+                       "bestSlots":  [
+                                         "lunch",
+                                         "dinner"
+                                     ],
+                       "routeGroup":  "miyako-food",
+                       "priority":  "option",
+                       "coordinates":  {
+                                           "lat":  24.721,
+                                           "lng":  125.327,
+                                           "precision":  "approx"
+                                       },
+                       "notes":  "358908.jpg 圖上 12。Shigira 一帶餐飲候選，待查店型與營業時間。"
+                   },
+                   {
+                       "id":  "uni-beach",
+                       "name":  "Uni beach",
+                       "island":  "miyako",
+                       "area":  "kurima",
+                       "category":  [
+                                        "beach",
+                                        "view"
+                                    ],
+                       "bestSlots":  [
+                                         "afternoon"
+                                     ],
+                       "routeGroup":  "miyako-beach",
+                       "priority":  "option",
+                       "coordinates":  {
+                                           "lat":  24.765,
+                                           "lng":  125.246,
+                                           "precision":  "approx"
+                                       },
+                       "notes":  "358908.jpg 圖上 13。來間島附近海灘候選，待確認實際入口與交通。"
+                   },
+                   {
+                       "id":  "aparagi-63",
+                       "name":  "アパラギ第63",
+                       "island":  "miyako",
+                       "area":  "irabu",
+                       "category":  [
+                                        "food",
+                                        "local"
+                                    ],
+                       "bestSlots":  [
+                                         "lunch",
+                                         "afternoon"
+                                     ],
+                       "routeGroup":  "miyako-food",
+                       "priority":  "reference",
+                       "coordinates":  {
+                                           "lat":  24.828,
+                                           "lng":  125.183,
+                                           "precision":  "approx"
+                                       },
+                       "notes":  "358908.jpg 圖上 14。伊良部方向圖上候選，店型需再確認。"
+                   },
+                   {
+                       "id":  "kuninaka-shoten",
+                       "name":  "Kuninaka Shoten / 國仲商店",
+                       "island":  "miyako",
+                       "area":  "irabu",
+                       "category":  [
+                                        "snack",
+                                        "local-shop"
+                                    ],
+                       "bestSlots":  [
+                                         "morning",
+                                         "afternoon"
+                                     ],
+                       "routeGroup":  "miyako-food",
+                       "priority":  "option",
+                       "coordinates":  {
+                                           "lat":  24.826,
+                                           "lng":  125.186,
+                                           "precision":  "approx"
+                                       },
+                       "notes":  "358908.jpg 圖上 15。伊良部在地小吃 / 商店候選，圖上標示國仲商店。"
+                   },
+                   {
+                       "id":  "hello-vacay",
+                       "name":  "1 LAB Hello, VACAY!",
+                       "island":  "miyako",
+                       "area":  "irabu",
+                       "category":  [
+                                        "cafe",
+                                        "shopping"
+                                    ],
+                       "bestSlots":  [
+                                         "afternoon"
+                                     ],
+                       "routeGroup":  "miyako-food",
+                       "priority":  "option",
+                       "coordinates":  {
+                                           "lat":  24.826,
+                                           "lng":  125.185,
+                                           "precision":  "approx"
+                                       },
+                       "notes":  "358908.jpg 圖上 16。伊良部方向咖啡 / 休息候選。"
+                   },
+                   {
+                       "id":  "irabu-bridge-sea-station",
+                       "name":  "Irabu Bridge Sea Station / いらぶ大橋 海の駅",
+                       "island":  "miyako",
+                       "area":  "irabu",
+                       "category":  [
+                                        "souvenir",
+                                        "view",
+                                        "rest-stop"
+                                    ],
+                       "bestSlots":  [
+                                         "morning",
+                                         "afternoon"
+                                     ],
+                       "routeGroup":  "miyako-land",
+                       "priority":  "high",
+                       "coordinates":  {
+                                           "lat":  24.808,
+                                           "lng":  125.195,
+                                           "precision":  "approx"
+                                       },
+                       "notes":  "358908.jpg 圖上 17。伊良部大橋旁休息 / 伴手禮 / 看海點。"
+                   },
+                   {
+                       "id":  "aw-miyako-shimosato",
+                       "name":  "A&W Miyako Shimosato St.",
+                       "island":  "miyako",
+                       "area":  "hirara",
+                       "category":  [
+                                        "restaurant",
+                                        "burger"
+                                    ],
+                       "bestSlots":  [
+                                         "lunch",
+                                         "dinner"
+                                     ],
+                       "routeGroup":  "miyako-food",
+                       "priority":  "option",
+                       "coordinates":  {
+                                           "lat":  24.786,
+                                           "lng":  125.292,
+                                           "precision":  "approx"
+                                       },
+                       "notes":  "358908.jpg 圖上 18。宮古市區速食候選，適合低腦力補餐。"
+                   },
+                   {
+                       "id":  "j-bowl-miyako",
+                       "name":  "J BOWL 宮古島店",
+                       "island":  "miyako",
+                       "area":  "hirara",
+                       "category":  [
+                                        "cafe",
+                                        "acai",
+                                        "breakfast"
+                                    ],
+                       "bestSlots":  [
+                                         "morning",
+                                         "afternoon"
+                                     ],
+                       "routeGroup":  "miyako-food",
+                       "priority":  "option",
+                       "coordinates":  {
+                                           "lat":  24.804,
+                                           "lng":  125.282,
+                                           "precision":  "approx"
+                                       },
+                       "notes":  "358908.jpg 圖上 19。アサイーボウル / グリークヨーグルト専門店。"
+                   },
+                   {
+                       "id":  "miyako-shrine",
+                       "name":  "宮古神社",
+                       "island":  "miyako",
+                       "area":  "hirara",
+                       "category":  [
+                                        "shrine",
+                                        "walk"
+                                    ],
+                       "bestSlots":  [
+                                         "morning",
+                                         "afternoon"
+                                     ],
+                       "routeGroup":  "miyako-land",
+                       "priority":  "option",
+                       "coordinates":  {
+                                           "lat":  24.807,
+                                           "lng":  125.281,
+                                           "precision":  "approx"
+                                       },
+                       "notes":  "358908.jpg 圖上 20。平良市區散步候選。"
+                   },
+                   {
+                       "id":  "canopy-miyako-hotel",
+                       "name":  "Canopy 飯店候選",
+                       "island":  "miyako",
+                       "area":  "hirara",
+                       "category":  [
+                                        "hotel",
+                                        "stay"
+                                    ],
+                       "bestSlots":  [
+                                         "dinner"
+                                     ],
+                       "routeGroup":  "miyako-hotel",
+                       "priority":  "reference",
+                       "coordinates":  {
+                                           "lat":  24.807,
+                                           "lng":  125.276,
+                                           "precision":  "approx"
+                                       },
+                       "notes":  "358908.jpg 圖上 21。圖上飯店候選標示含 Canopy；先作地圖理解，名稱需再確認。"
+                   },
+                   {
+                       "id":  "yard-miyako",
+                       "name":  "Yard 宮古島",
+                       "island":  "miyako",
+                       "area":  "hirara",
+                       "category":  [
+                                        "shopping",
+                                        "souvenir"
+                                    ],
+                       "bestSlots":  [
+                                         "afternoon"
+                                     ],
+                       "routeGroup":  "miyako-shopping",
+                       "priority":  "option",
+                       "coordinates":  {
+                                           "lat":  24.804,
+                                           "lng":  125.282,
+                                           "precision":  "approx"
+                                       },
+                       "notes":  "358908.jpg 圖上 22。購物商場 / 補給候選，需再確認店型。"
+                   },
+                   {
+                       "id":  "blue-seal-painagama",
+                       "name":  "Blue Seal Miyako Island Painagama Branch",
+                       "island":  "miyako",
+                       "area":  "hirara-painagama",
+                       "category":  [
+                                        "dessert",
+                                        "ice-cream"
+                                    ],
+                       "bestSlots":  [
+                                         "afternoon",
+                                         "dinner"
+                                     ],
+                       "routeGroup":  "miyako-food",
+                       "priority":  "option",
+                       "coordinates":  {
+                                           "lat":  24.805,
+                                           "lng":  125.272,
+                                           "precision":  "approx"
+                                       },
+                       "notes":  "358908.jpg 圖上 24。Painagama 一帶冰品候選。"
+                   },
+                   {
+                       "id":  "sakuri-cheesecake",
+                       "name":  "小さな幸せ Sakuri",
+                       "island":  "miyako",
+                       "area":  "hirara",
+                       "category":  [
+                                        "dessert",
+                                        "cheesecake"
+                                    ],
+                       "bestSlots":  [
+                                         "afternoon"
+                                     ],
+                       "routeGroup":  "miyako-food",
+                       "priority":  "option",
+                       "coordinates":  {
+                                           "lat":  24.805,
+                                           "lng":  125.282,
+                                           "precision":  "approx"
+                                       },
+                       "notes":  "358908.jpg 圖上 25。圖上標示巴斯克乳酪蛋糕，平良市區甜點候選。"
+                   },
+                   {
+                       "id":  "yukisari",
+                       "name":  "雪さり",
+                       "island":  "miyako",
+                       "area":  "hirara",
+                       "category":  [
+                                        "food",
+                                        "reference"
+                                    ],
+                       "bestSlots":  [
+                                         "afternoon"
+                                     ],
+                       "routeGroup":  "miyako-food",
+                       "priority":  "reference",
+                       "coordinates":  {
+                                           "lat":  24.805,
+                                           "lng":  125.282,
+                                           "precision":  "approx"
+                                       },
+                       "notes":  "358908.jpg 圖上 26。圖中文字較小，店名先按圖記為雪さり，待 Google Maps 連結確認。"
+                   },
+                   {
+                       "id":  "miyako-ebi-farm",
+                       "name":  "宮古海老養殖場",
+                       "island":  "miyako",
+                       "area":  "ikema-karimata",
+                       "category":  [
+                                        "restaurant",
+                                        "shrimp"
+                                    ],
+                       "bestSlots":  [
+                                         "lunch",
+                                         "afternoon"
+                                     ],
+                       "routeGroup":  "miyako-food",
+                       "priority":  "high",
+                       "coordinates":  {
+                                           "lat":  24.88,
+                                           "lng":  125.26,
+                                           "precision":  "approx"
+                                       },
+                       "notes":  "358908.jpg 圖上 27。已在頁面美食候選中，補入地圖點。"
+                   },
+                   {
+                       "id":  "aragusuku-beach",
+                       "name":  "Aragusuku Beach / 新城海岸",
+                       "island":  "miyako",
+                       "area":  "east",
+                       "category":  [
+                                        "beach",
+                                        "snorkel"
+                                    ],
+                       "bestSlots":  [
+                                         "morning",
+                                         "afternoon"
+                                     ],
+                       "routeGroup":  "miyako-beach",
+                       "priority":  "option",
+                       "coordinates":  {
+                                           "lat":  24.742,
+                                           "lng":  125.444,
+                                           "precision":  "approx"
+                                       },
+                       "notes":  "358908.jpg 圖上 29。東岸海灘，和東平安名岬同方向；不自駕時交通成本高。"
+                   },
+                   {
+                       "id":  "higashi-hennazaki",
+                       "name":  "東平安名岬",
+                       "island":  "miyako",
+                       "area":  "east",
+                       "category":  [
+                                        "cape",
+                                        "view"
+                                    ],
+                       "bestSlots":  [
+                                         "morning",
+                                         "afternoon"
+                                     ],
+                       "routeGroup":  "miyako-land",
+                       "priority":  "option",
+                       "coordinates":  {
+                                           "lat":  24.719,
+                                           "lng":  125.468,
+                                           "precision":  "approx"
+                                       },
+                       "notes":  "358908.jpg 圖上 30。宮古東端景點，路途遠；只適合包車或觀光計程車路線。"
+                   },
+                   {
+                       "id":  "fukugiya-miyako",
+                       "name":  "富古謝 宮古島店",
+                       "island":  "miyako",
+                       "area":  "hirara",
+                       "category":  [
+                                        "shopping",
+                                        "souvenir"
+                                    ],
+                       "bestSlots":  [
+                                         "afternoon"
+                                     ],
+                       "routeGroup":  "miyako-shopping",
+                       "priority":  "reference",
+                       "coordinates":  {
+                                           "lat":  24.804,
+                                           "lng":  125.282,
+                                           "precision":  "approx"
+                                       },
+                       "notes":  "358908.jpg 圖上 31。圖上購物 / 市區候選，店名與店型待確認。"
+                   },
+                   {
+                       "id":  "san-a-miyakojima-city",
+                       "name":  "San-A Miyakojima City / 無印良品 宮古島City店",
+                       "island":  "miyako",
+                       "area":  "hirara",
+                       "category":  [
+                                        "shopping",
+                                        "supermarket",
+                                        "muji"
+                                    ],
+                       "bestSlots":  [
+                                         "morning",
+                                         "afternoon",
+                                         "dinner"
+                                     ],
+                       "routeGroup":  "miyako-shopping",
+                       "priority":  "high",
+                       "coordinates":  {
+                                           "lat":  24.793,
+                                           "lng":  125.295,
+                                           "precision":  "approx"
+                                       },
+                       "notes":  "358908.jpg 圖上 32。宮古補給核心，可買熟食、飲料、隔天早餐。"
+                   },
+                   {
+                       "id":  "miyako-shopping-center-image",
+                       "name":  "浜旺宮古島購物中心",
+                       "island":  "miyako",
+                       "area":  "hirara",
+                       "category":  [
+                                        "shopping",
+                                        "mall"
+                                    ],
+                       "bestSlots":  [
+                                         "afternoon"
+                                     ],
+                       "routeGroup":  "miyako-shopping",
+                       "priority":  "reference",
+                       "coordinates":  {
+                                           "lat":  24.795,
+                                           "lng":  125.29,
+                                           "precision":  "approx"
+                                       },
+                       "notes":  "358908.jpg 圖上 33。圖中文字較小，購物中心名稱待確認；先作宮古市區購物候選。"
+                   },
+                   {
+                       "id":  "cheerful-snorkel-ig",
+                       "name":  "Cheerful / チアフル 浮潛IG",
+                       "island":  "miyako",
+                       "area":  "list-only",
+                       "category":  [
+                                        "marine",
+                                        "snorkel",
+                                        "instagram"
+                                    ],
+                       "bestSlots":  [
+                                         "morning",
+                                         "afternoon"
+                                     ],
+                       "routeGroup":  "miyako-marine",
+                       "priority":  "reference",
+                       "notes":  "358908.jpg 圖上 10，標示為 List-only / 無固定地點；不放地圖座標。"
                    }
                ]
 }
