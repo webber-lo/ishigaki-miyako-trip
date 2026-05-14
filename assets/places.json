@@ -1,6 +1,6 @@
 {
     "version":  1,
-    "updated":  "2026-05-06",
+    "updated":  "2026-05-14",
     "notes":  "Personal place library collected during Ishigaki / Miyako trip planning. Coordinates are approximate for visual route discussion until each Google Maps link is confirmed.",
     "places":  [
                    {
@@ -790,6 +790,119 @@
                                            "precision":  "approx"
                                        },
                        "notes":  "若能保證上午場，適合 Day 7 回石垣前。"
+                   },
+                   {
+                       "id":  "ryuguen-yakiniku",
+                       "name":  "炭火焼肉 琉宮苑",
+                       "island":  "miyako",
+                       "area":  "shigira-ueno",
+                       "category":  [
+                                        "restaurant",
+                                        "yakiniku",
+                                        "miyako-beef"
+                                    ],
+                       "bestSlots":  [
+                                         "dinner"
+                                     ],
+                       "routeGroup":  "miyako-food",
+                       "priority":  "high",
+                       "coordinates":  {
+                                           "lat":  24.723,
+                                           "lng":  125.325,
+                                           "precision":  "approx"
+                                       },
+                       "notes":  "木炭烤肉 / 炭火焼肉。地址查得為宮古島市上野字宮国974-7，位於 Shigira Resort 一帶。Google Maps: https://maps.app.goo.gl/kfF13wfwF9ukh2ht5?g_st=ic"
+                   },
+                   {
+                       "id":  "sushemaro-malasada",
+                       "name":  "マラサダドーナツ SUSHEMARO",
+                       "island":  "miyako",
+                       "area":  "hirara",
+                       "category":  [
+                                        "dessert",
+                                        "donut",
+                                        "breakfast"
+                                    ],
+                       "bestSlots":  [
+                                         "morning",
+                                         "afternoon"
+                                     ],
+                       "routeGroup":  "miyako-food",
+                       "priority":  "high",
+                       "coordinates":  {
+                                           "lat":  24.801,
+                                           "lng":  125.282,
+                                           "precision":  "approx"
+                                       },
+                       "notes":  "人氣マラサダ甜甜圈，晚到可能賣完。地址查得為宮古島市平良下里510-6。Google Maps: https://maps.app.goo.gl/mkXNRS7SYsDyNuHD8?g_st=ic"
+                   },
+                   {
+                       "id":  "miyako-kibi-chaya",
+                       "name":  "宮古きび茶屋 / さとうきび甘味処",
+                       "island":  "miyako",
+                       "area":  "karimata",
+                       "category":  [
+                                        "dessert",
+                                        "sugarcane",
+                                        "cafe"
+                                    ],
+                       "bestSlots":  [
+                                         "afternoon"
+                                     ],
+                       "routeGroup":  "miyako-food",
+                       "priority":  "option",
+                       "coordinates":  {
+                                           "lat":  24.861,
+                                           "lng":  125.284,
+                                           "precision":  "approx"
+                                       },
+                       "notes":  "甘蔗甜點 / 飲品候選。地址查得為宮古島市平良狩俣1177，適合池間島、北線或陸地日順路。Google Maps: https://maps.app.goo.gl/ZhReeqGLzmVeHLwZ9?g_st=ic"
+                   },
+                   {
+                       "id":  "kaimiru",
+                       "name":  "Kaimiru 海美来",
+                       "island":  "miyako",
+                       "area":  "ikema",
+                       "category":  [
+                                        "snack",
+                                        "souvenir",
+                                        "view"
+                                    ],
+                       "bestSlots":  [
+                                         "morning",
+                                         "afternoon"
+                                     ],
+                       "routeGroup":  "miyako-food",
+                       "priority":  "high",
+                       "coordinates":  {
+                                           "lat":  24.921,
+                                           "lng":  125.247,
+                                           "precision":  "approx"
+                                       },
+                       "notes":  "池間大橋附近休息點，紅芋もち推薦；也可看海、買伴手禮。地址查得為宮古島市平良字池間1173-7。Google Maps: https://maps.app.goo.gl/dbGhN1Vi793ejNxe9?g_st=ic"
+                   },
+                   {
+                       "id":  "shimoji-super",
+                       "name":  "Shimoji Super / シモジスーパー",
+                       "island":  "miyako",
+                       "area":  "irabu-shimoji",
+                       "category":  [
+                                        "shopping",
+                                        "ice-cream",
+                                        "local-supermarket"
+                                    ],
+                       "bestSlots":  [
+                                         "morning",
+                                         "afternoon"
+                                     ],
+                       "routeGroup":  "miyako-food",
+                       "priority":  "option",
+                       "coordinates":  {
+                                           "lat":  24.829,
+                                           "lng":  125.178,
+                                           "precision":  "approx"
+                                       },
+                       "notes":  "伊良部島 / 下地島方向的在地超市，目標是下地島限定黑糖冰。地址查得為宮古島市伊良部伊良部22。Google Maps: https://maps.app.goo.gl/pJJs3hZGZ27KY1J58?g_st=ic"
                    }
                ]
 }
