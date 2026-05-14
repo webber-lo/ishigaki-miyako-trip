@@ -811,7 +811,7 @@
                 "lng": 125.325,
                 "precision": "approx"
             },
-            "notes": "IG ?????????????????????974-7?IG: @ryuguen_miyako????? / ???????????????????Google Maps: https://maps.app.goo.gl/kfF13wfwF9ukh2ht5?g_st=ic"
+            "notes": "Miyako yakiniku candidate. Address from shared IG: Ueno Miyaguni 974-7. IG: @ryuguen_miyako. Good formal dinner option. Google Maps: https://maps.app.goo.gl/kfF13wfwF9ukh2ht5"
         },
         {
             "id": "sushemaro-malasada",
@@ -834,7 +834,7 @@
                 "lng": 125.282,
                 "precision": "approx"
             },
-            "notes": "IG ?????????????????????510-6?IG: @sushemaro??????????????????????????Google Maps: https://maps.app.goo.gl/mkXNRS7SYsDyNuHD8?g_st=ic"
+            "notes": "Popular malasada / donut shop. Address from shared IG: Hirara Shimozato 510-6. IG: @sushemaro. May sell out if late. Google Maps: https://maps.app.goo.gl/mkXNRS7SYsDyNuHD8"
         },
         {
             "id": "miyako-kibi-chaya",
@@ -856,7 +856,7 @@
                 "lng": 125.276,
                 "precision": "approx"
             },
-            "notes": "IG ?????????????????????129?IG: @kibichaya_miyako?????????????? / ?????Google Maps: https://maps.app.goo.gl/ZhReeqGLzmVeHLwZ9?g_st=ic"
+            "notes": "Sugarcane sweets shop. Address from shared IG: Hirara Karimata 129. IG: @kibichaya_miyako. Google Maps: https://maps.app.goo.gl/ZhReeqGLzmVeHLwZ9"
         },
         {
             "id": "kaimiru",
@@ -879,7 +879,7 @@
                 "lng": 125.247,
                 "precision": "approx"
             },
-            "notes": "IG ??????????????????????1173-7????????????????????????????Google Maps: https://maps.app.goo.gl/dbGhN1Vi793ejNxe9?g_st=ic"
+            "notes": "Kaimiru, famous for beni-imo mochi. Address from shared IG: Hirara Ikema 1173-7. Good Ikema route snack. Google Maps: https://maps.app.goo.gl/dbGhN1Vi793ejNxe9"
         },
         {
             "id": "shimoji-super",
@@ -994,7 +994,7 @@
                 "lng": 125.275,
                 "precision": "approx"
             },
-            "notes": "IG ????????????????????????358-1?IG: @harrysshrimptruck??? / ?????????????????????????????"
+            "notes": "Garlic shrimp truck from the yellow bus video. Address from shared IG: Hirara Karimata 358-1. IG: @harrysshrimptruck."
         },
         {
             "id": "ikema-bridge-parking",
@@ -1232,7 +1232,7 @@
                 "lng": 125.184,
                 "precision": "approx"
             },
-            "notes": "IG ??????????????????????96-2?IG: @1lab_hellovacay_???????? / ?????"
+            "notes": "Irabu island route reference. Address from shared IG: Irabu Nakachi 96-2. IG: @1lab_hellovacay_."
         },
         {
             "id": "irabu-bridge-sea-station",
@@ -1582,7 +1582,7 @@
         },
         {
             "id": "niima-soba",
-            "name": "?????",
+            "name": "Niima Soba",
             "island": "miyako",
             "area": "karimata",
             "category": [
@@ -1600,11 +1600,11 @@
                 "lng": 125.275,
                 "precision": "approx"
             },
-            "notes": "IG ?????????????????????3???IG: @niimasoba??? / ?????????"
+            "notes": "Miyako soba candidate. Address from shared IG: Hirara Karimata 3. IG: @niimasoba. Good for north / Ikema route lunch."
         },
         {
             "id": "ntsubata-mozuku-men",
-            "name": "????",
+            "name": "Ntsubata Mozuku Men",
             "island": "miyako",
             "area": "hirara",
             "category": [
@@ -1623,11 +1623,11 @@
                 "lng": 125.281,
                 "precision": "approx"
             },
-            "notes": "IG ?????????????????????381?IG: @mozukumenya.ntsubata??????????"
+            "notes": "Mozuku noodle candidate. Address from shared IG: Hirara Nishizato 381. IG: @mozukumenya.ntsubata. Hirara city lunch option."
         },
         {
             "id": "miyako-parlor-haisai",
-            "name": "??????? ????",
+            "name": "Miyako Parlor Haisai",
             "island": "miyako",
             "area": "hirara",
             "category": [
@@ -1646,11 +1646,11 @@
                 "lng": 125.282,
                 "precision": "approx"
             },
-            "notes": "IG ?????????????????????601 ??????1F?IG: @miyako_haisai??????? / ?????"
+            "notes": "Miyako snack / sweets candidate. Address from shared IG: Hirara Shimozato 601, Chura House 1F. IG: @miyako_haisai."
         },
         {
             "id": "nakayukui-shoten",
-            "name": "???????",
+            "name": "Nakayukui Shoten",
             "island": "miyako",
             "area": "irabu",
             "category": [
@@ -1669,11 +1669,11 @@
                 "lng": 125.187,
                 "precision": "approx"
             },
-            "notes": "IG ??????????????????????57-3?IG: @irabujima.nakayukui???????? / ?????"
+            "notes": "Irabu island local snack candidate. Address from shared IG: Irabu Kuninaka 57-3. IG: @irabujima.nakayukui."
         },
         {
             "id": "irikunya",
-            "name": "??????",
+            "name": "Irikunyaa",
             "island": "miyako",
             "area": "irabu-nagahama",
             "category": [
@@ -1691,7 +1691,7 @@
                 "lng": 125.157,
                 "precision": "approx"
             },
-            "notes": "IG ????????????????????????????? / ?????????"
+            "notes": "Irabu island local food candidate. Address from shared IG: Irabu Nagahama 1."
         },
         {
             "id": "tawan-thai-foods",
@@ -1713,11 +1713,11 @@
                 "lng": 125.426,
                 "precision": "approx"
             },
-            "notes": "IG ?????????????????????306-5?IG: @tawan_thaifoods????? / ?????????????????"
+            "notes": "Thai food candidate near the east / Aragusuku route. Address from shared IG: Tomori 306-5. IG: @tawan_thaifoods."
         },
         {
             "id": "san-irabujima",
-            "name": "?",
+            "name": "San Irabujima",
             "island": "miyako",
             "area": "irabu-nagahama",
             "category": [
@@ -1734,11 +1734,11 @@
                 "lng": 125.157,
                 "precision": "approx"
             },
-            "notes": "IG ??????????????????????1643-1 ???????????????IG: @san_irabujima????????????????????"
+            "notes": "Irabu island restaurant candidate. Address from shared IG: Irabu Nagahama 1643-1, Ferris Villa Suite Bay area. IG: @san_irabujima."
         },
         {
             "id": "tenowaya-sakaba",
-            "name": "??????",
+            "name": "Sakaba Tenowaya",
             "island": "miyako",
             "area": "hirara",
             "category": [
@@ -1756,11 +1756,11 @@
                 "lng": 125.281,
                 "precision": "approx"
             },
-            "notes": "IG ?????????????????????263-2?IG: @tenowaya_sakaba_miyakojima??????? / ?????????????????"
+            "notes": "Hirara city izakaya candidate. Address from shared IG: Hirara Nishizato 263-2. IG: @tenowaya_sakaba_miyakojima."
         },
         {
             "id": "mitsubachi-gokart-rentacar",
-            "name": "????GoKart??????????",
+            "name": "Mitsubachi GoKart Rentacar Miyakojima",
             "island": "miyako",
             "area": "hirara-airport-area",
             "category": [
@@ -1779,11 +1779,11 @@
                 "lng": 125.301,
                 "precision": "approx"
             },
-            "notes": "?????3850.jp?MINI ????????????????????????????? 8:30-19:00????????????????1124-6?Tel: 0980-79-7320???: https://reserve.rentacar-samurai.jp/ / ??: https://3850.jp/"
+            "notes": "Rental car reference from 3850.jp. Experience-style cars such as MINI convertible. Confirm insurance, pickup, return time and car type before booking."
         },
         {
             "id": "iris-rentacar-miyako-airport",
-            "name": "??????????????",
+            "name": "Iris Rentacar Miyako Airport",
             "island": "miyako",
             "area": "miyako-airport",
             "category": [
@@ -1802,7 +1802,7 @@
                 "lng": 125.298,
                 "precision": "approx"
             },
-            "notes": "?????3850.jp ???????? / ???????????????????????? 8:30-19:00????????????????1330-30?Tel: 0980-70-8488???: https://3850.jp/"
+            "notes": "Rental car reference from 3850.jp. More practical airport-area option for a Miyako land route. Confirm insurance, pickup and return rules before booking."
         },
         {
             "id": "breakfast-hotel-porto-ishigaki",
@@ -1824,11 +1824,11 @@
                 "lng": 124.157,
                 "precision": "approx"
             },
-            "notes": "???????Google Maps: maps.app.goo.gl/v87hg??????????? 3,000????????? 5 ??????????????????????happy hour ?????????????????????????????"
+            "notes": "Ishigaki lodging reference. Google Maps: maps.app.goo.gl/v87hg. Traveler note: under 3,000 per night before breakfast, about 5 min walk to tourist area, kitchen / laundry / fridge / microwave, happy hour. Downsides: average soundproofing and damp smell."
         },
         {
             "id": "seawater-diving-service-ishigaki",
-            "name": "????????????????",
+            "name": "Seawater Diving Service Ishigaki",
             "island": "ishigaki",
             "area": "city-or-port",
             "category": [
@@ -1846,11 +1846,11 @@
                 "lng": 124.153,
                 "precision": "approx"
             },
-            "notes": "???????Google Maps: maps.app.goo.gl/QTzGp?????3 ? 19,800 ???? 6,600 ????????????????????????????????????????????????IG ?? mantapapa????? 6/27 ???? Marine shop Jiyujin Ishigaki?"
+            "notes": "Ishigaki dive backup. Google Maps: maps.app.goo.gl/QTzGp. Traveler note: 3 dives 19,800 yen, gear 6,600 yen, pickup included, friendly local Japanese guide, simple boat, uses translation app. IG reference: mantapapa. Main 6/27 booking remains Jiyujin."
         },
         {
             "id": "peipei515-ishigaki-dive-reference",
-            "name": "peipei515 ??????",
+            "name": "peipei515 Ishigaki dive reference",
             "island": "ishigaki",
             "area": "reference",
             "category": [
@@ -1864,7 +1864,333 @@
             ],
             "routeGroup": "ishigaki-marine",
             "priority": "reference",
-            "notes": "???????IG ?? peipei515?????????????????? 3 ? 35,000 ?????????????????"
+            "notes": "Backup only. Traveler mentioned IG peipei515, Taiwanese staff at an Ishigaki dive shop; reference price 3 dives 35,000 yen. Does not replace the confirmed 6/27 Jiyujin booking."
+        },
+        {
+            "id": "chinen-shokai",
+            "name": "Chinen Shokai",
+            "island": "ishigaki",
+            "area": "city",
+            "category": [
+                "breakfast",
+                "onigiri",
+                "fried-food",
+                "local-shop"
+            ],
+            "bestSlots": [
+                "morning"
+            ],
+            "routeGroup": "ishigaki-city",
+            "priority": "high",
+            "coordinates": {
+                "lat": 24.342,
+                "lng": 124.159,
+                "precision": "approx"
+            },
+            "notes": "Ishigaki self-drive breakfast stop. After 9:00 car pickup, buy fried chicken onigiri and fried hot dog. Also useful as dive-day takeaway food."
+        },
+        {
+            "id": "tamatorizaki-observatory",
+            "name": "Tamatorizaki Observatory",
+            "island": "ishigaki",
+            "area": "north-east",
+            "category": [
+                "view",
+                "observatory"
+            ],
+            "bestSlots": [
+                "morning",
+                "afternoon"
+            ],
+            "routeGroup": "ishigaki-north",
+            "priority": "high",
+            "coordinates": {
+                "lat": 24.488,
+                "lng": 124.279,
+                "precision": "approx"
+            },
+            "notes": "North-east Ishigaki viewpoint. Good stop before or after Hirakubozaki Lighthouse."
+        },
+        {
+            "id": "hirakubozaki-lighthouse",
+            "name": "Hirakubozaki Lighthouse",
+            "island": "ishigaki",
+            "area": "north",
+            "category": [
+                "view",
+                "lighthouse"
+            ],
+            "bestSlots": [
+                "morning",
+                "afternoon"
+            ],
+            "routeGroup": "ishigaki-north",
+            "priority": "high",
+            "coordinates": {
+                "lat": 24.6086,
+                "lng": 124.3254,
+                "precision": "approx"
+            },
+            "notes": "Northern tip of Ishigaki. Main self-drive viewpoint, far from city; best only on rental car or charter day."
+        },
+        {
+            "id": "fusaki-beach",
+            "name": "Fusaki Beach",
+            "island": "ishigaki",
+            "area": "west",
+            "category": [
+                "beach",
+                "sunset",
+                "hotel-beach"
+            ],
+            "bestSlots": [
+                "afternoon",
+                "dinner"
+            ],
+            "routeGroup": "ishigaki-west",
+            "priority": "high",
+            "coordinates": {
+                "lat": 24.37,
+                "lng": 124.123,
+                "precision": "approx"
+            },
+            "notes": "Hotel beach, safer for a quick sunset stop. Parking and toilets available; shower needs confirmation. Good west-route sunset photo stop."
+        },
+        {
+            "id": "takamine-distillers",
+            "name": "Takamine Distillers",
+            "island": "ishigaki",
+            "area": "west",
+            "category": [
+                "shopping",
+                "awamori",
+                "distillery"
+            ],
+            "bestSlots": [
+                "afternoon"
+            ],
+            "routeGroup": "ishigaki-west",
+            "priority": "option",
+            "coordinates": {
+                "lat": 24.444,
+                "lng": 124.135,
+                "precision": "approx"
+            },
+            "notes": "Small awamori distillery around Kabira area. Buy bottles only if driving; no tasting before driving."
+        },
+        {
+            "id": "kabira-park-chaya",
+            "name": "Kabira Park Chaya",
+            "island": "ishigaki",
+            "area": "west",
+            "category": [
+                "restaurant",
+                "yaeyama-soba"
+            ],
+            "bestSlots": [
+                "lunch"
+            ],
+            "routeGroup": "ishigaki-west",
+            "priority": "high",
+            "coordinates": {
+                "lat": 24.459,
+                "lng": 124.143,
+                "precision": "approx"
+            },
+            "notes": "Kabira Bay lunch candidate. Traveler liked the cartilage soba."
+        },
+        {
+            "id": "kabira-sata-andagi",
+            "name": "Kabira sata andagi / mango tea",
+            "island": "ishigaki",
+            "area": "west",
+            "category": [
+                "snack",
+                "sata-andagi"
+            ],
+            "bestSlots": [
+                "afternoon"
+            ],
+            "routeGroup": "ishigaki-west",
+            "priority": "option",
+            "coordinates": {
+                "lat": 24.459,
+                "lng": 124.143,
+                "precision": "approx"
+            },
+            "notes": "Kabira Bay snack stop. Good sata andagi but do not buy too many; share with mango tea."
+        },
+        {
+            "id": "yaeyama-milk-shop",
+            "name": "Yaeyama Milk Shop",
+            "island": "ishigaki",
+            "area": "city-or-west",
+            "category": [
+                "dessert",
+                "yogurt",
+                "ice-cream"
+            ],
+            "bestSlots": [
+                "afternoon"
+            ],
+            "routeGroup": "ishigaki-city",
+            "priority": "option",
+            "coordinates": {
+                "lat": 24.339,
+                "lng": 124.156,
+                "precision": "approx"
+            },
+            "notes": "Yogurt drink is good but small; ice cream is stronger. Clothes are pricey. Google Maps link still needed."
+        },
+        {
+            "id": "eight-days-ishigaki",
+            "name": "8days",
+            "island": "ishigaki",
+            "area": "city",
+            "category": [
+                "dessert",
+                "drink",
+                "shaved-ice"
+            ],
+            "bestSlots": [
+                "afternoon"
+            ],
+            "routeGroup": "ishigaki-city",
+            "priority": "high",
+            "coordinates": {
+                "lat": 24.338,
+                "lng": 124.156,
+                "precision": "approx"
+            },
+            "notes": "Recommended for hand-shaved Okinawa brown sugar milk and iced matcha. Ishigaki city dessert / drink stop."
+        },
+        {
+            "id": "papiru-cake",
+            "name": "papiru cake",
+            "island": "ishigaki",
+            "area": "city",
+            "category": [
+                "dessert",
+                "cake",
+                "cafe"
+            ],
+            "bestSlots": [
+                "afternoon"
+            ],
+            "routeGroup": "ishigaki-city",
+            "priority": "reference",
+            "coordinates": {
+                "lat": 24.338,
+                "lng": 124.156,
+                "precision": "approx"
+            },
+            "notes": "Warm local cake shop; taste described as ordinary. Good only if already nearby during a slow city walk."
+        },
+        {
+            "id": "ichigyoichie-ishigaki",
+            "name": "Ichigyoichie Ishigaki",
+            "island": "ishigaki",
+            "area": "city",
+            "category": [
+                "restaurant",
+                "izakaya",
+                "live-music"
+            ],
+            "bestSlots": [
+                "dinner"
+            ],
+            "routeGroup": "ishigaki-city-night",
+            "priority": "option",
+            "coordinates": {
+                "lat": 24.338,
+                "lng": 124.156,
+                "precision": "approx"
+            },
+            "notes": "Izakaya with sanshin performance. Strong local atmosphere; many Japanese guests sing along. Food is on the expensive side."
+        },
+        {
+            "id": "aw-ishigaki",
+            "name": "A&W Ishigaki",
+            "island": "ishigaki",
+            "area": "city",
+            "category": [
+                "restaurant",
+                "burger",
+                "fast-food"
+            ],
+            "bestSlots": [
+                "lunch",
+                "afternoon"
+            ],
+            "routeGroup": "ishigaki-city",
+            "priority": "reference",
+            "coordinates": {
+                "lat": 24.34,
+                "lng": 124.16,
+                "precision": "approx"
+            },
+            "notes": "A&W burger backup. Traveler note: root beer normal, burger normal. Lower priority than HEART LAND."
+        },
+        {
+            "id": "shimamura-ishigaki",
+            "name": "Shimamura Ishigaki",
+            "island": "ishigaki",
+            "area": "city-edge",
+            "category": [
+                "shopping",
+                "clothes"
+            ],
+            "bestSlots": [
+                "afternoon"
+            ],
+            "routeGroup": "ishigaki-north-return",
+            "priority": "option",
+            "coordinates": {
+                "lat": 24.36,
+                "lng": 124.18,
+                "precision": "approx"
+            },
+            "notes": "Hot-day city shopping backup. Can pair with Don Quijote on the return from north route."
+        },
+        {
+            "id": "ishigaki-monkey-park",
+            "name": "Ishigaki Yaima Village / monkey park reference",
+            "island": "ishigaki",
+            "area": "west",
+            "category": [
+                "park",
+                "animal",
+                "reference"
+            ],
+            "bestSlots": [
+                "afternoon"
+            ],
+            "routeGroup": "ishigaki-west",
+            "priority": "reference",
+            "coordinates": {
+                "lat": 24.39,
+                "lng": 124.14,
+                "precision": "approx"
+            },
+            "notes": "West-route reference only. User is not interested, so keep low priority and off the main route."
+        },
+        {
+            "id": "ishigaki-paragliding-reference",
+            "name": "Ishigaki paragliding reference",
+            "island": "ishigaki",
+            "area": "north-or-west",
+            "category": [
+                "activity",
+                "paragliding",
+                "reference"
+            ],
+            "bestSlots": [
+                "morning",
+                "afternoon"
+            ],
+            "routeGroup": "ishigaki-north",
+            "priority": "reference",
+            "notes": "Weather-dependent activity reference only. User is not interested for now; do not place in formal itinerary."
         }
     ]
 }
