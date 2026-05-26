@@ -2191,6 +2191,29 @@
             "routeGroup": "ishigaki-north",
             "priority": "reference",
             "notes": "Weather-dependent activity reference only. User is not interested for now; do not place in formal itinerary."
+        },
+        {
+            "id": "all-blue-ishigaki-sunset-kayak",
+            "name": "All Blue Ishigaki sunset SUP / Kayak",
+            "island": "ishigaki",
+            "area": "arakawa",
+            "category": [
+                "marine",
+                "kayak",
+                "sup",
+                "sunset"
+            ],
+            "bestSlots": [
+                "dinner"
+            ],
+            "routeGroup": "ishigaki-marine",
+            "priority": "high",
+            "coordinates": {
+                "lat": 24.3602,
+                "lng": 124.1379,
+                "precision": "approx"
+            },
+            "notes": "Day 6 sunset activity. Address: Ishigaki, Arakawa 2462-1. Shop beach near the city west side, not Kabira Bay. Use shop pickup if available, otherwise short taxi from city."
         }
     ]
 }
