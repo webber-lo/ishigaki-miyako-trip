@@ -2214,6 +2214,72 @@
                 "precision": "approx"
             },
             "notes": "Day 6 sunset activity. Address: Ishigaki, Arakawa 2462-1. Shop beach near the city west side, not Kabira Bay. Use shop pickup if available, otherwise short taxi from city."
+        },
+        {
+            "id": "miyako-snow-salt-museum",
+            "name": "Miyakojima Snow Salt Museum",
+            "island": "miyako",
+            "area": "north",
+            "category": [
+                "shopping",
+                "snack",
+                "salt"
+            ],
+            "bestSlots": [
+                "afternoon"
+            ],
+            "routeGroup": "miyako-shopping",
+            "priority": "reference",
+            "coordinates": {
+                "lat": 24.841,
+                "lng": 125.279,
+                "precision": "approx"
+            },
+            "notes": "Reference stop only. Traveler note: no tax refund, but packaged chips were seen there. Only visit if already driving north."
+        },
+        {
+            "id": "miyakojima-underwater-park",
+            "name": "Miyakojima Underwater Park",
+            "island": "miyako",
+            "area": "north",
+            "category": [
+                "sightseeing",
+                "family",
+                "ticket"
+            ],
+            "bestSlots": [
+                "afternoon"
+            ],
+            "routeGroup": "miyako-land",
+            "priority": "reference",
+            "coordinates": {
+                "lat": 24.846,
+                "lng": 125.274,
+                "precision": "approx"
+            },
+            "notes": "Reference stop only. Traveler note: cute dated ticket and game-related stop. Add only if a rental-car north route opens up."
+        },
+        {
+            "id": "apollostation-minami-tomiyama",
+            "name": "apollostation Minami / Tomiyama Sekiyu",
+            "island": "miyako",
+            "area": "shimoji",
+            "category": [
+                "gas-station",
+                "rental-car"
+            ],
+            "bestSlots": [
+                "afternoon",
+                "dinner"
+            ],
+            "routeGroup": "miyako-shopping",
+            "priority": "reference",
+            "coordinates": {
+                "lat": 24.744,
+                "lng": 125.284,
+                "precision": "approx"
+            },
+            "notes": "Rental-car fuel reference. Traveler note: may be farther, but staff were friendly. Always follow the rental shop's required gas station and receipt rules."
         }
     ]
 }
