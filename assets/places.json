@@ -727,7 +727,7 @@
         },
         {
             "id": "manta-city",
-            "name": "Manta City / 川平外海",
+            "name": "Manta City / Ishigaki dive activity",
             "island": "ishigaki",
             "area": "sea-west",
             "category": [
@@ -739,17 +739,17 @@
                 "morning"
             ],
             "routeGroup": "ishigaki-marine",
-            "priority": "core",
+            "priority": "confirmed",
             "coordinates": {
                 "lat": 24.47,
                 "lng": 124.125,
                 "precision": "approx"
             },
-            "notes": "6/27 Marine shop Jiyujin Ishigaki 已確認：Fun diving 3 dives 23,000 円，BCD + regulator 租借 3,500 円；體驗潛水 + 浮潛 20,000 円，追加潛水 6,000 円。午餐不含需自備；當天下午和晚上要降載。"
+            "notes": "Confirmed 2026-06-27 Ishigaki diving with Marine shop Jiyujin Ishigaki: around 09:00 meet, ending around 15:00. Bring own lunch and drinks."
         },
         {
             "id": "blue-cave-yabiji",
-            "name": "青之洞窟 + 八重干瀨",
+            "name": "Blue Cave / Yabiji reference",
             "island": "miyako",
             "area": "irabu-yabiji",
             "category": [
@@ -761,17 +761,17 @@
                 "afternoon"
             ],
             "routeGroup": "miyako-marine",
-            "priority": "core",
+            "priority": "reference",
             "coordinates": {
                 "lat": 24.88,
                 "lng": 125.18,
                 "precision": "approx"
             },
-            "notes": "宮古海洋主線。無接送方案需先安排交通。"
+            "notes": "Old reference only. Current confirmed 2026-06-29 activity is Miyakojima Yabiji at 13:00 self-drive check-in, ending around 17:00."
         },
         {
             "id": "pumpkin-cave",
-            "name": "南瓜鐘乳洞 + 海上獨木舟",
+            "name": "Pumpkin Cave morning activity",
             "island": "miyako",
             "area": "miyako-east-or-south",
             "category": [
@@ -783,13 +783,13 @@
                 "morning"
             ],
             "routeGroup": "miyako-cave",
-            "priority": "option",
+            "priority": "confirmed",
             "coordinates": {
                 "lat": 24.727,
                 "lng": 125.323,
                 "precision": "approx"
             },
-            "notes": "若能保證上午場，適合 Day 7 回石垣前。"
+            "notes": "Confirmed 2026-06-30 morning activity: around 09:00 meet, ending around 13:00. Use rental car to reach the meeting point."
         },
         {
             "id": "ryuguen-yakiniku",
@@ -2193,29 +2193,6 @@
             "notes": "Weather-dependent activity reference only. User is not interested for now; do not place in formal itinerary."
         },
         {
-            "id": "all-blue-ishigaki-sunset-kayak",
-            "name": "All Blue Ishigaki sunset SUP / Kayak",
-            "island": "ishigaki",
-            "area": "arakawa",
-            "category": [
-                "marine",
-                "kayak",
-                "sup",
-                "sunset"
-            ],
-            "bestSlots": [
-                "dinner"
-            ],
-            "routeGroup": "ishigaki-marine",
-            "priority": "high",
-            "coordinates": {
-                "lat": 24.3602,
-                "lng": 124.1379,
-                "precision": "approx"
-            },
-            "notes": "Day 6 sunset activity. Address: Ishigaki, Arakawa 2462-1. Shop beach near the city west side, not Kabira Bay. Use shop pickup if available, otherwise short taxi from city."
-        },
-        {
             "id": "miyako-snow-salt-museum",
             "name": "Miyakojima Snow Salt Museum",
             "island": "miyako",
@@ -2280,6 +2257,28 @@
                 "precision": "approx"
             },
             "notes": "Rental-car fuel reference. Traveler note: may be farther, but staff were friendly. Always follow the rental shop's required gas station and receipt rules."
+        },
+        {
+            "id": "kabira-bay-sup-pickup",
+            "name": "Kabira Bay SUP activity",
+            "island": "ishigaki",
+            "area": "kabira",
+            "category": [
+                "marine",
+                "sup",
+                "confirmed"
+            ],
+            "bestSlots": [
+                "afternoon"
+            ],
+            "routeGroup": "ishigaki-marine",
+            "priority": "confirmed",
+            "coordinates": {
+                "lat": 24.459,
+                "lng": 124.143,
+                "precision": "approx"
+            },
+            "notes": "Confirmed Day 6 activity: 2026-07-01 Kabira Bay SUP, 13:00 meet, pickup included. No Ishigaki rental car needed."
         }
     ]
 }
