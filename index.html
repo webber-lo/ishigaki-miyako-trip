@@ -294,6 +294,42 @@
       margin: 10px 0 0;
     }
 
+    .choice-board {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 16px;
+    }
+
+    .choice-card {
+      padding: 16px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fbfcfa;
+    }
+
+    .choice-card h3 {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 18px;
+    }
+
+    .choice-card ol {
+      margin: 12px 0 0;
+      padding-left: 22px;
+    }
+
+    .choice-card li {
+      margin: 6px 0;
+    }
+
+    .choice-card .why {
+      margin-top: 12px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
     .leaning {
       padding: 10px 12px;
       border-left: 4px solid var(--sun);
@@ -345,6 +381,7 @@
       }
 
       .discussion-grid,
+      .choice-board,
       .food-list {
         grid-template-columns: 1fr;
       }
@@ -469,41 +506,37 @@
           </tbody>
         </table>
       </div>
-      <div class="table-wrap compact-status">
-        <table>
-          <thead>
-            <tr>
-              <th>6/28 宮古租車後</th>
-              <th>適合天氣</th>
-              <th>怎麼走</th>
-              <th>吃喝 / 停留點</th>
-              <th>判斷</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="day">A. 南西海景短線</td>
-              <td>晴天、雲少、想拍漂亮海色。</td>
-              <td>宮古機場租車 → 平良午餐 → 來間大橋 → 與那霸前浜 → Painagama Beach → 平良晚餐。</td>
-              <td>SUSHEMARO、平良市區咖啡、San-A 補給。</td>
-              <td>第一順位。距離短、海景強、剛抵達也不會太累。</td>
-            </tr>
-            <tr>
-              <td class="day">B. 北線甜點海景</td>
-              <td>天氣好、體力好、想多開一點車。</td>
-              <td>宮古機場租車 → 平良午餐 → 宮古きび茶屋 → 池間大橋 → 海美来 → 回平良。</td>
-              <td>宮古きび茶屋、海美来紅芋もち。</td>
-              <td>第二順位。比較遠，只在精神好、天氣漂亮時加。</td>
-            </tr>
-            <tr>
-              <td class="day">C. 雨天市區補給</td>
-              <td>下雨、風大、太熱、大家累。</td>
-              <td>宮古機場租車 → 平良午餐 → 宮古神社 → 宮古市公設市場 → San-A / 超市 → check-in。</td>
-              <td>んつばた / 宮古そば、SUSHEMARO、咖啡、超市熟食。</td>
-              <td>保底路線。把 6/29 船上水、飯糰、防曬、軟水一次補齊。</td>
-            </tr>
-          </tbody>
-        </table>
+      <div class="choice-board" aria-label="6/28 宮古租車後路線選擇">
+        <article class="choice-card">
+          <h3><span class="tag">首選</span> 天氣好，就走南西海景</h3>
+          <ol>
+            <li>宮古機場租車</li>
+            <li>平良市區午餐：んつばた / 宮古そば</li>
+            <li>來間大橋 + 與那霸前浜</li>
+            <li>Painagama Beach 看海，回平良吃晚餐</li>
+          </ol>
+          <p class="why">這條最適合第一天：開車短、海景強、累了可以隨時回市區。</p>
+        </article>
+        <article class="choice-card">
+          <h3><span class="tag">加碼</span> 很有精神，才走北線</h3>
+          <ol>
+            <li>平良午餐後往北開</li>
+            <li>宮古きび茶屋</li>
+            <li>池間大橋</li>
+            <li>海美来吃紅芋もち，回平良</li>
+          </ol>
+          <p class="why">這條比較遠，只在天氣漂亮、大家不累時加；不要跟南西線全塞同一天。</p>
+        </article>
+        <article class="choice-card">
+          <h3><span class="tag">保底</span> 下雨或累，就留市區</h3>
+          <ol>
+            <li>宮古神社拍照</li>
+            <li>宮古市公設市場</li>
+            <li>San-A / 超市補 6/29 船上水、飯糰、防曬、軟水</li>
+            <li>check-in 後休息</li>
+          </ol>
+          <p class="why">這條不是退而求其次，是保體力。隔天 13:00 八重干瀨才是重點。</p>
+        </article>
       </div>
       <div class="discussion-grid">
         <article class="item">
